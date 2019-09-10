@@ -2,3 +2,16 @@ div#top{
 	height: 100px;
 	background-color: red;
 }
+.left{
+	height: 200px;
+	width: 25%;
+	display: inline-block;
+	background-color:green;
+
+}
+.right{
+	height: 200px;
+	width: 75%;
+	display: inline-block;
+	background-color: yellow;
+}
