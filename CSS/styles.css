@@ -2,7 +2,7 @@ div#top {
 	height: 100px;
 	background-color: red;
 }
-<<<<<<< HEAD
+
 .left{
 	height: 200px;
 	width: 25%;
@@ -11,10 +11,8 @@ div#top {
 
 }
 .right{
-	height: 200px;
+	height: 500px;
 	width: 75%;
-	display: inline-block;
 	background-color: yellow;
 }
-=======
->>>>>>> 5a86d4de5eac4af6639cdbeb5dc1ba50912133de
+
