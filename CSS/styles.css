@@ -3,16 +3,22 @@ div#top {
 	background-color: red;
 }
 
+
+#bottom{
+	width: 100%;
+	height: vh;
+	display: flex;
+}
+
 .left{
 	height: 200px;
 	width: 25%;
-	display: inline-block;
 	background-color:green;
 
 }
 .right{
 	height: 500px;
 	width: 75%;
+
 	background-color: yellow;
 }
-
