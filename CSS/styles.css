@@ -22,3 +22,8 @@ div#top {
 
 	background-color: yellow;
 }
+
+.clock {
+    float: inherit;
+    margin: 0 40px 0 0;
+}
