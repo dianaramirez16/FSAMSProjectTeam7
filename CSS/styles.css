@@ -1,8 +1,13 @@
-div#top {
-	height: 100px;
-	background-color: red;
+.top-panel {
+	text-align: left;
+	width: 400px;
+	margin-bottom: 10px;
+	border: 2px solid red;
 }
-
+.top-panel .clock {
+	float:right;
+	margin: 0 40px 0 0;
+}
 
 #bottom{
 	width: 100%;
@@ -13,14 +18,13 @@ div#top {
 .left{
 	height: 200px;
 	width: 25%;
-	background-color:green;
+	border:2px solid green;
 
 }
 .right{
 	height: 500px;
 	width: 75%;
-
-	background-color: yellow;
+	border: 2px solid yellow;
 }
 
 .clock {
