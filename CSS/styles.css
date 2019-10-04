@@ -35,17 +35,17 @@
 	background-position: bottom right;
 }
 
-.grid-container > div { /*use this syntax to override parent divs*/
+.grid-container > div { /*use this syntax to override parent div's sstyle*/
 	display: inline-grid;
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; /*26 columns*/
 	grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 	grid-gap: 0px;
-	background-color: #2196F3;
+	background-color: rgba(117, 211, 255, .5);
 	padding: 0px;
 }
 
 .grid-item {
-	border: 1px solid blue;
+	border: 1px solid rgba(117, 211, 255, .3);
 	height: 31px;
 	padding: 7.5pt;
 	text-align: center;
