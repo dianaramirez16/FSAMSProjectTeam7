@@ -46,7 +46,8 @@
 
 .grid-item {
 	border: 1px solid blue;
-	padding: 7.25pt;
+	height: 31px;
+	padding: 7.5pt;
 	text-align: center;
 	font-size: 8px;
 }
