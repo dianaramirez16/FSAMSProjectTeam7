@@ -13,12 +13,12 @@
 #bottom{
 	width: 100%;
 	height: vh;
-	display: flex;
+	display: -webkit-flex; /*now works on safari*/
 }
 
 .left{
-	height: 200px;
-	width: 25%;
+	height: 500px;
+	width: 20%;
 	border:2px solid green;
 }
 
@@ -33,7 +33,7 @@ div .right{
 }
 
 .grid-container {
-	display: grid;
+	display: inline-grid;
 	grid-template-columns: auto auto auto;
 	grid-gap: 0px;
 	background-color: #2196F3;
@@ -47,8 +47,8 @@ div .right{
 
 .grid-item {
 	border: 1px solid blue;
-	grid-row-start:1;
-	grid-row-end:30;
+	padding: 7.25pt;
+	text-align: center;
 }
 
 .clock {
