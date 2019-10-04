@@ -4,6 +4,7 @@
 	margin-bottom: 10px;
 	border: 2px solid red;
 }
+
 .top-panel .clock {
 	float:right;
 	margin: 0 40px 0 0;
@@ -19,12 +20,35 @@
 	height: 200px;
 	width: 25%;
 	border:2px solid green;
-
 }
-.right{
-	height: 500px;
-	width: 75%;
-	border: 2px solid yellow;
+
+div .right{
+	height: 700px;
+	width: 1034px;
+	border: 1px dashed black;
+	background-image: url("../images/buildingblueprint.png");
+	background-repeat: no-repeat;
+	background-attachment: relative;
+	background-position: bottom right;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 0px;
+	background-color: #2196F3;
+	padding: 0px;
+}
+
+.grid-container > div {
+	text-align: center;
+	padding: 5px 0;
+}
+
+.grid-item {
+	border: 1px solid blue;
+	grid-row-start:1;
+	grid-row-end:30;
 }
 
 .clock {
