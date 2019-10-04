@@ -3,6 +3,7 @@
 	width: 400px;
 	margin-bottom: 10px;
 	border: 2px solid red;
+	height: 30px;
 }
 
 .top-panel .clock {
@@ -26,13 +27,13 @@
 
 .right{
 	display: inline-block;
-	height: 700px;
-	width: 1034px;
+	height: 696px;
+	width: 1030px;
 	border: 1px dashed black;
 	background-image: url("../images/buildingblueprint.png");
 	background-repeat: no-repeat;
 	background-attachment: relative;
-	background-position: bottom right;
+	background-position: center;
 }
 
 .grid-container > div { /*use this syntax to override parent div's sstyle*/
@@ -40,8 +41,12 @@
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; /*26 columns*/
 	grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 	grid-gap: 0px;
-	background-color: rgba(117, 211, 255, .5);
+	background-color: blue;
 	padding: 0px;
+}
+
+.spacer {
+	width:1%;
 }
 
 .grid-item {
