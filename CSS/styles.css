@@ -14,15 +14,18 @@
 	width: 100%;
 	height: vh;
 	display: -webkit-flex; /*now works on safari*/
+	align-items:
 }
 
 .left{
+	display: inline-block;
 	height: 500px;
 	width: 20%;
 	border:2px solid green;
 }
 
-div .right{
+.right{
+	display: inline-block;
 	height: 700px;
 	width: 1034px;
 	border: 1px dashed black;
@@ -32,17 +35,16 @@ div .right{
 	background-position: bottom right;
 }
 
-.grid-container {
-	display: inline-grid;
-	grid-template-columns: auto auto auto;
-	grid-gap: 0px;
-	background-color: #2196F3;
-	padding: 0px;
+.zone-bar {
+	display: inline-block;
 }
 
 .grid-container > div {
-	text-align: center;
-	padding: 5px 0;
+	display: inline-grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; /*26 columns*/
+	grid-gap: 0px;
+	background-color: #2196F3;
+	padding: 0px;
 }
 
 .grid-item {
