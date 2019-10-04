@@ -35,13 +35,10 @@
 	background-position: bottom right;
 }
 
-.zone-bar {
-	display: inline-block;
-}
-
-.grid-container > div {
+.grid-container > div { /*use this syntax to override parent divs*/
 	display: inline-grid;
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; /*26 columns*/
+	grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 	grid-gap: 0px;
 	background-color: #2196F3;
 	padding: 0px;
@@ -51,6 +48,7 @@
 	border: 1px solid blue;
 	padding: 7.25pt;
 	text-align: center;
+	font-size: 8px;
 }
 
 .clock {
