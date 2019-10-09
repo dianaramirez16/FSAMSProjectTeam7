@@ -1,8 +1,10 @@
+/* color palette reference https://colorhunt.co/palette/158462 */
+
 .top-panel {
 	text-align: left;
 	width: 400px;
 	margin-bottom: 10px;
-	border: 2px solid red;
+	border: 7px inset #ff4d00;
 	height: 30px;
 }
 
@@ -15,25 +17,29 @@
 	width: 100%;
 	height: vh;
 	display: -webkit-flex; /*now works on safari*/
-	align-items:
 }
 
 .left{
 	display: inline-block;
 	height: 500px;
 	width: 20%;
-	border:2px solid green;
+	border: 7px inset #ff4d00;
+	background-color: #413f41;
 }
 
 .right{
 	display: inline-block;
 	height: 696px;
 	width: 1030px;
-	border: 1px dashed black;
+	border: 7px outset grey;
 	background-image: url("../images/buildingblueprint.png");
 	background-repeat: no-repeat;
 	background-attachment: relative;
 	background-position: center;
+}
+
+.zone-bar {
+	border: 7px inset #ff4d00;
 }
 
 body {
@@ -46,7 +52,7 @@ body {
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; /*26 columns*/
 	grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
 	grid-gap: 0px;
-	background-color: blue;
+	background-color: #443737;
 	padding: 0px;
 }
 
