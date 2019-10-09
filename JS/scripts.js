@@ -2,7 +2,23 @@ let clockOff = true;
 let time = 0;
 let clockID;
 
-const alarm = document.querySelector("#top");
+/*
+grid object
+color:
+motion-sensor:
+sprinklers:
+
+*/
+const cardsList = document.querySelectorAll('.top-panel');
+
+function evaluateClick(clickTarget) {
+    return (
+        clickTarget.classList.contains('top-panel')
+    );
+}
+
+
+const alarm = document.querySelector('.top-panel');
 
 alarm.addEventListener('click', event => {
     const clickTarget = event.target;
@@ -27,10 +43,6 @@ function displayTime() { //creates timer
 }
 
 function startClock() {
-    if (clockOff) {
-            startClock();
-            clockOff = false;
-        }
     clockID = setInterval(() => {
         time++;
         displayTime();
