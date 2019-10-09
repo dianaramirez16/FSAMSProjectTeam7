@@ -27,7 +27,7 @@
 	background-color: #413f41;
 }
 
-.right{
+.middle{
 	display: inline-block;
 	height: 696px;
 	width: 1030px;
@@ -38,7 +38,7 @@
 	background-position: center;
 }
 
-.zone-bar {
+.right {
 	border: 7px inset #ff4d00;
 }
 
