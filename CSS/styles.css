@@ -1,10 +1,22 @@
 /* color palette reference https://colorhunt.co/palette/158462 */
+p, span, body {
+		color:yellow;
+}
+a {
+	font-size: 20px;
+	font-family: serif;
+	color: #34ebc9;
+	font-family: 'Hepta Slab', serif;
+	text-decoration: none;
+	padding: 0px 10px;
+}
 
 .top-panel {
+
 	text-align: left;
-	width: 400px;
+	width: 95%;
 	margin-bottom: 10px;
-	border: 7px inset #ff4d00;
+	border: 4px double #ff4d00;
 	height: 30px;
 }
 
