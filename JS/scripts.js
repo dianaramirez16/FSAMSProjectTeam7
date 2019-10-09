@@ -17,9 +17,7 @@ function evaluateClick(clickTarget) {
     );
 }
 
-
-const alarm = document.querySelector('.top-panel');
-
+const alarm = document.querySelector(".top-panel");
 alarm.addEventListener('click', event => {
     const clickTarget = event.target;
     if (evaluateClick(clickTarget)) {
@@ -33,7 +31,7 @@ alarm.addEventListener('click', event => {
 function displayTime() { //creates timer
   const minutes = Math.floor(time/60);
   const seconds = time % 60;
-  const clock = document.querySelector(".clock");
+  const clock = document.querySelector('.clock');
   clock.innerHTML = time;
   if (seconds<10) {
     clock.innerHTML =  `${minutes}:0${seconds}`;
@@ -54,4 +52,4 @@ function stopClock() {
   clearInterval(clockID);
   clockOff =true;
 }
-//startClock();
+startClock();
