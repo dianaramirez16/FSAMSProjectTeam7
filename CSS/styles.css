@@ -36,6 +36,11 @@
 	background-position: center;
 }
 
+body {
+	background-image: url("../images/concreteWall.png");
+	/* credit to http://bg.siteorigin.com/ for this bg image */
+}
+
 .grid-container > div { /*use this syntax to override parent div's sstyle*/
 	display: inline-grid;
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; /*26 columns*/

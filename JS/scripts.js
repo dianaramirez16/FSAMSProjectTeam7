@@ -52,4 +52,4 @@ function stopClock() {
   clearInterval(clockID);
   clockOff =true;
 }
-startClock();
+//startClock();
