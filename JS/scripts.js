@@ -8,7 +8,14 @@ color:
 motion-sensor:
 sprinklers:
 
+
+Christines_office class{
+
+}
 */
+
+
+
 const cardsList = document.querySelectorAll('.top-panel');
 
 function evaluateClick(clickTarget) {
