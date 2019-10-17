@@ -1,3 +1,7 @@
+jQuery(document).ready(function(){
+   $.getScript('/js/jquery-1.7.min.js');
+});
+
 let clockOff = true;
 let time = 0;
 let clockID;
