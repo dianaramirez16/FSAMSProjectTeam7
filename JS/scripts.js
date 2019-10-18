@@ -1,27 +1,10 @@
-jQuery(document).ready(function(){
-   $.getScript('/js/jquery-1.7.min.js');
-});
 
+//clock variables
 let clockOff = true;
 let time = 0;
 let clockID;
 
-/*
-grid object
-color:
-motion-sensor:
-sprinklers:
-
-
-Christines_office class{
-
-}
-*/
-
-
-
 const cardsList = document.querySelectorAll('.top-panel');
-
 function evaluateClick(clickTarget) {
     return (
         clickTarget.classList.contains('top-panel')
@@ -63,4 +46,12 @@ function stopClock() {
   clearInterval(clockID);
   clockOff =true;
 }
-//startClock();
+//end clock code
+// being defining rooms
+var Christines_office = new function() {
+    this.type = "macintosh";
+    this.color = "red";
+    this.getInfo = function () {
+        return this.color + ' ' + this.type + ' apple';
+    };
+}
