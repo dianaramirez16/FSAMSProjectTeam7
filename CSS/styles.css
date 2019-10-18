@@ -129,3 +129,30 @@ body {
 .room4Grid {
 	background-color: rgba(255, 179, 0, .5);
 }
+
+.room5Grid {
+	background-color: rgba(237, 117, 57, .5);
+}
+
+.mainRoomGrid {
+	background-color: rgba(255, 223, 207, .5 );
+}
+
+.girlGrid {
+	background-color: rgba(0, 84, 148, .5);
+}
+
+.boyGrid {
+	background-color: rgba(0, 148, 37, .5);
+}
+.workAreaGrid {
+	background-color: rgba(231, 163, 255,.5);
+}
+
+.hallwayGrid {
+	outline: 2px dashed yellow;
+	box-shadow: inset 0px 0px 0px 3px rgba(255, 242, 0,.8);
+  box-sizing: border-box
+	outline-offset: -2px;
+	background-color: rgba(0, 255, 229, 0.5);
+}
