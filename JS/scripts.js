@@ -11,6 +11,8 @@ function evaluateClick(clickTarget) {
     );
 }
 
+
+
 const alarm = document.querySelector(".top-panel");
 alarm.addEventListener('click', event => {
     const clickTarget = event.target;
@@ -48,7 +50,9 @@ function stopClock() {
 }
 //end clock code
 // being defining rooms
-var Christines_office = new function() {
+const room1List = document.querySelectorAll('.top-panel');
+
+var room1 = new function() {
     this.type = "macintosh";
     this.color = "red";
     this.getInfo = function () {
