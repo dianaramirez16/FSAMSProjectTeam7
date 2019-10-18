@@ -33,10 +33,8 @@ a {
 }
 
 .bottom{
-	width: 100%;
 	height: vh;
 	display: -webkit-flex; /* works on safari*/
-
 }
 
 #left-side {
@@ -61,6 +59,11 @@ a {
 	background-color: #413f41;
 }
 
+#middleDivs {
+		width: inherit;
+		height: 100%;
+}
+
 .middle{
 	display: inline-block;
 	height: 696px;
@@ -72,8 +75,15 @@ a {
 	background-position: center;
 }
 
+.view-panel {
+	display: inline-block;
+	height: 205px;
+	width: 1030px;
+	border: 6px inset #34ebc9;
+}
+
 .right {
-	width: 20%;
+	width: 450px;
 	border: 7px inset #ff4d00;
 }
 
