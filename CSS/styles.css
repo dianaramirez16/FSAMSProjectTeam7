@@ -1,3 +1,4 @@
+/* reference for button styles by manz @ https://codepen.io/manz/pen/KLPEby*/
 @use postcss-nested;
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
@@ -212,9 +213,12 @@ button {
   color: var(--grayColor);
   outline: 0;
   padding: 2px;
-  margin-right: 1em;
+  margin-right: 10px;
   box-shadow: 10px 8px 0 black;
   text-decoration: none;
+	border-radius: 50%;
+	height: 130px;
+	width: 130px;
 
   &:active {
     color: var(--highlightColor);
