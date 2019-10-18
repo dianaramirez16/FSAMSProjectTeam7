@@ -95,5 +95,9 @@ body {
 }
 
 .room1Grid {
-	background-color: rgba(252, 255, 186, .5) ; 
+	background-color: rgba(252, 255, 186, .5) ;
+}
+
+.room2Grid {
+	background-color: rgba(188, 255, 186, .5);
 }
