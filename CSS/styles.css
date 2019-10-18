@@ -39,10 +39,24 @@ a {
 
 }
 
-.left{
+#left-side {
+	width:500px;
+	height: 100%;
+}
+
+.commandContainer{
 	display: inline-block;
 	height: 500px;
-	width: 20%;
+	width: 100%;
+	border: 7px inset #ff4d00;
+	background-color: #413f41;
+
+}
+
+.override-panel {
+	display: inline-block;
+	height: 400px;
+	width: 100%;
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
 }
@@ -78,7 +92,8 @@ body {
 }
 
 .spacer {
-	width:2%;
+	width:2.6%;
+	height: 30px;
 }
 
 .grid-item {
@@ -151,7 +166,7 @@ body {
 
 .hallwayGrid {
 	outline: 2px dashed yellow;
-	box-shadow: inset 0px 0px 0px 3px rgba(255, 242, 0,.8);
+	box-shadow: inset 0px 0px 0px 4px rgba(255, 242, 0,.8);
   box-sizing: border-box
 	outline-offset: -2px;
 	background-color: rgba(0, 255, 229, 0.5);
