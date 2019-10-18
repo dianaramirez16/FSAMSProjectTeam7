@@ -1,3 +1,23 @@
+@use postcss-nested;
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
+:root {
+  --blueColor: #0028aa;
+  --grayColor: #bcbdaa;
+  --darkgrayColor: #525252;
+  --cyanColor: #59ffff;
+  --yellowColor: #fffa51;
+  --emeraldColor: #184343;
+  --lightEmeraldColor: #38a6a6;
+  --redColor: #9c0b07;
+  --badTextColor: #fe6666;
+  --highlightTextColor: #ffffff;
+  --fontName: 'IBM Plex Mono', monospaced;
+
+  font-family: var(--fontName);
+  font-size: 18px;
+}
+
 /* color palette reference https://colorhunt.co/palette/158462 */
 .clock-panel p, span  {
 		color:yellow;
@@ -90,6 +110,7 @@ a {
 body {
 	background-image: url("../images/concreteWall.png");
 	/* credit to http://bg.siteorigin.com/ for this bg image */
+	font-size: 24px;
 }
 
 .grid-container > div { /*use this syntax to override parent div's sstyle*/
@@ -180,4 +201,36 @@ body {
   box-sizing: border-box
 	outline-offset: -2px;
 	background-color: rgba(0, 255, 229, 0.5);
+}
+
+
+button {
+  background: var(--darkgrayColor);
+  border: 0;
+  font-family: var(--fontName);
+  font-size: 32px;
+  color: var(--grayColor);
+  outline: 0;
+  padding: 2px;
+  margin-right: 1em;
+  box-shadow: 10px 8px 0 black;
+  text-decoration: none;
+
+  &:active {
+    color: var(--highlightColor);
+    position: relative;
+    left: 10px;
+    top: 8px;
+    box-shadow: none;
+  }
+
+  &::before {
+    content: "⯇ ";
+    color: var(--highlightColor);
+  }
+
+  &::after {
+    content: " ⯈";
+    color: var(--highlightColor);
+  }
 }
