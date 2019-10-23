@@ -50,7 +50,8 @@ function stopClock() {
 }
 //end clock code
 // being defining rooms
-const room1List = document.querySelectorAll('.top-panel');
+const room1List = document.querySelectorAll('.room1Grid');
+
 
 var room1 = new function() {
     this.type = "macintosh";
