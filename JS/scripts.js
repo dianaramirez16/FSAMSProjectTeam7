@@ -67,9 +67,16 @@ myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"
 //prints all classes type and id's
 
 
+//pass array to this function
+function setRoomOnFire(room) {
+  getRandomInt(room.length)
+  var firstRed = room[(getRandomInt(room.length))].style.backgroundColor = "Red"
+  if (firstRed.style.backgroundColor ="Red") //this will be seconds 
+  {
+    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "DarkOrange"
+  } else {
 
-function setRoomOnFire(room1List) {
-
+  }
     //declare array of grids contained in the room
     //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*
