@@ -50,13 +50,31 @@ function stopClock() {
 }
 //end clock code
 // being defining rooms
+
+class Room {
+  constructor(name, onFire, lockedDown, sprinklers, emptyRoom)
+}
+
+
 const room1List = document.querySelectorAll('.room1Grid');
 
-
-var room1 = new function() {
-    this.type = "macintosh";
-    this.color = "red";
-    this.getInfo = function () {
-        return this.color + ' ' + this.type + ' apple';
-    };
+function setRoomOnFire(/* accepts room object*/) {
+    //declare array of grids contained in the room
+    //randomize which grids get set on fire first
+    //rooms will catch fire at different rates based on emergency type*
+    //status output: heat sensor going off in room () temp rising abnormally
+    //status output: checking motion sensors ...
+    //status output: room is empty / room has occupants
+      //if room is empty, status output: *** call emergency services
+      //if room has occupants, instruct guard to call room
+      //status output: CALL ROOM - give guard 5 seconds to call, if no call to room, call emergency services
+      //status output: countdown timer to validate emergency while call is in progress 20,19,18,17,16,15...
+        //if emergency is invalid, begin procedure to override alarm
+        //if alarm is valid, but does not need fire department,
+        //guard will override alarm systems and go to the room to check in person, or send someone else to check.
+        //status output: SYSTEM OVERRIDE, manual restart required from site
+        //if guard does not call room within 5 seconds, and room temp is still rising, turn on sprinklers
+        //status output: GUARD INACTIVE: CALLING EMERGENCY SERVICES
+          //if sprinklers are ineffective or do not work to stabilize fire alarms, call emergency services
+          //if sprinklers are effective, still call emergency services?
 }
