@@ -197,13 +197,16 @@ body {
 }
 
 .hallwayGrid {
-	outline: 2px dashed yellow;
-	box-shadow: inset 0px 0px 0px 4px rgba(255, 242, 0,.8);
+	outline: 1px solid blue;
+	box-shadow: inset 0px 0px 0px 4px rgba(255, 242, 0,.4);
   box-sizing: border-box
 	outline-offset: -2px;
-	background-color: rgba(0, 255, 229, 0.5);
+	background-color: rgba(0, 255, 229, 0.1);
 }
 
+.lightPath {
+  outline: 3px dashed yellow;
+}
 
 button {
   background: var(--darkgrayColor);
