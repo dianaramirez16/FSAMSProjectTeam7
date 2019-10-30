@@ -4,6 +4,7 @@ let clockOff = true;
 let time = 0;
 let clockID;
 
+
 const cardsList = document.querySelectorAll('.top-panel');
 function evaluateClick(clickTarget) {
     return (
@@ -43,22 +44,32 @@ function startClock() {
     }, 1000);
 }
 
-
 function stopClock() {
   clearInterval(clockID);
   clockOff =true;
 }
 //end clock code
 // being defining rooms
-
+/*
 class Room {
   constructor(name, onFire, lockedDown, sprinklers, emptyRoom)
 }
-
+*/
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 const room1List = document.querySelectorAll('.room1Grid');
+var myArr = Array.from(room1List);
+getRandomInt(myArr.length)
+console.log(myArr.length)
+myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"
+//prints all classes type and id's
 
-function setRoomOnFire(/* accepts room object*/) {
+
+
+function setRoomOnFire(room1List) {
+
     //declare array of grids contained in the room
     //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*
@@ -77,4 +88,5 @@ function setRoomOnFire(/* accepts room object*/) {
         //status output: GUARD INACTIVE: CALLING EMERGENCY SERVICES
           //if sprinklers are ineffective or do not work to stabilize fire alarms, call emergency services
           //if sprinklers are effective, still call emergency services?
+
 }
