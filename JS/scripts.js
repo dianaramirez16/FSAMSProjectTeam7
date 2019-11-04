@@ -3,7 +3,7 @@
 let clockOff = true;
 let time = 0;
 let clockID;
-
+const clock = document.querySelector('.clock');
 
 const cardsList = document.querySelectorAll('.top-panel');
 function evaluateClick(clickTarget) {
@@ -28,7 +28,7 @@ alarm.addEventListener('click', event => {
 function displayTime() { //creates timer
   const minutes = Math.floor(time/60);
   const seconds = time % 60;
-  const clock = document.querySelector('.clock');
+
   clock.innerHTML = time;
   if (seconds<10) {
     clock.innerHTML =  `${minutes}:0${seconds}`;
@@ -69,11 +69,17 @@ myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"
 
 //pass array to this function
 function setRoomOnFire(room) {
+  startClock()
+  const seconds = clock.innerHTML;
   getRandomInt(room.length)
-  var firstRed = room[(getRandomInt(room.length))].style.backgroundColor = "Red"
-  if (firstRed.style.backgroundColor ="Red") //this will be seconds 
+  var firstRed = (room[(getRandomInt(room.length))].style.backgroundColor = "Red")
+  //firstRed.style.opacity = "0.5";
+  console.log("first red=" + firstRed);
+  console.log("seconds=" + seconds);
+  if (seconds==5) //this will be seconds
   {
-    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "DarkOrange"
+    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "blue"
+    console.log("secondred=" + secondRed);
   } else {
 
   }
@@ -97,3 +103,5 @@ function setRoomOnFire(room) {
           //if sprinklers are effective, still call emergency services?
 
 }
+
+setRoomOnFire(room1List)

@@ -19,6 +19,8 @@
   font-size: 18px;
 }
 
+
+
 /* color palette reference https://colorhunt.co/palette/158462 */
 .clock-panel p, span  {
 		color:yellow;
@@ -66,18 +68,20 @@ a {
 .commandContainer{
 	display: inline-block;
 	height: 500px;
-	width: 100%;
+	width: 480px;
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
+  padding-left: 5%;
 
 }
 
 .override-panel {
 	display: inline-block;
 	height: 400px;
-	width: 100%;
+	width: 480px;
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
+  padding-left: 5%;
 }
 
 #middleDivs {
@@ -197,15 +201,14 @@ body {
 }
 
 .hallwayGrid {
-	outline: 1px solid blue;
-	box-shadow: inset 0px 0px 0px 4px rgba(255, 242, 0,.4);
+
   box-sizing: border-box
-	outline-offset: -2px;
-	background-color: rgba(0, 255, 229, 0.1);
+	outline-inset:2px;
+	background-color: rgba(0, 170, 255, 0.4);
 }
 
 .lightPath {
-  outline: 3px dashed yellow;
+  outline: 5px solid yellow;
 }
 
 button {
@@ -240,4 +243,13 @@ button {
     content: " ⯈";
     color: var(--highlightColor);
   }
+}
+
+
+.top-border {
+  border-top: 3px solid black;
+}
+
+.right-border {
+  border-right: 3px solid black;
 }
