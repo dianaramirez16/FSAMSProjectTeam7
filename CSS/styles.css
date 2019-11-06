@@ -203,12 +203,14 @@ body {
 .hallwayGrid {
 
   box-sizing: border-box
-	outline-inset:2px;
+	outline-inset:2px solid orange;
 	background-color: rgba(0, 170, 255, 0.4);
 }
 
 .lightPath {
+
   outline: 5px solid yellow;
+  background-color: rbga(255, 236, 61, .4);
 }
 
 button {
@@ -252,4 +254,9 @@ button {
 
 .right-border {
   border-right: 3px solid black;
+}
+
+.zone {
+  display: none;
+  z-index: -10;
 }
