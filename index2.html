@@ -1,19 +1,135 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <title>Fire Safety Alarm Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/styles2.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Fire Safety Alarm Management System</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {height: 1500px}
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+          background-color: #f1f1f1;
+          margin-top: 100px;
+          height: 100%;
+          position: absolute;
+        }
+
+        .navbar {
+        position: fixed;
+        width: 100%;
+        }
+
+        body {
+          position: relative;
+          }
+        ul.nav-pills {
+            top: 80px;
+            position: fixed;
+            overflow: hidden;
+            display: inline-block;
+
+          }
+
+          div.col-sm-9 div {
+   height: 250px;
+   font-size: 28px;
+ }
+ #section1 {color: #fff; background-color: #1E88E5;}
+ #section2 {color: #fff; background-color: #673ab7;}
+ #section3 {color: #fff; background-color: #ff9800;}
+ #section41 {color: #fff; background-color: #00bcd4;}
+ #section42 {color: #fff; background-color: #009688;}
+
+ @media screen and (max-width: 810px) {
+   #section1, #section2, #section3, #section41, #section42  {
+     margin-left: 150px;
+   }
+ }
+
+        /* Set black background color, white text and some padding */
+        footer {
+          background-color: #555;
+          color: white;
+          padding: 15px;
+        }
+
+        .nav-stacked {
+          color: red;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+          .sidenav {
+            height: auto;
+            padding: 15px;
+            font-size: 15;
+
+          }
+          .row.content {height: auto;}
+        }
+      </style>
+<!--    <script type="text/javascript">
+       function display_c (start) {
+           window.start = parseFloat(start);
+           var end = 0 // change this to stop the counter at a higher value
+           var refresh = 1000; // Refresh rate in milli seconds
+           if( window.start >= end ) {
+               mytime = setTimeout( 'display_ct()',refresh )
+           } else {
+               alert("Time Over ");
+           }
+       }
+       function display_ct () {
+           // Calculate the number of days left
+           var days = Math.floor(window.start / 86400);
+           // After deducting the days calculate the number of hours left
+           var hours = Math.floor((window.start - (days * 86400 ))/3600)
+           // After days and hours , how many minutes are left
+           var minutes = Math.floor((window.start - (days * 86400 ) - (hours *3600 ))/60)
+           // Finally how many seconds left after removing days, hours and minutes.
+           var secs = Math.floor((window.start - (days * 86400 ) - (hours *3600 ) - (minutes*60)))
+           var x = window.start + "(" + days + " Days " + hours + " Hours " + minutes + " Minutes and " + secs + " Secondes " + ")";
+           document.getElementById('ct').innerHTML = x;
+           window.start = window.start - 1;
+           tt = display_c(window.start);
+       }
+       function stop() {
+           clearTimeout(mytime);
+       }
+   </script> -->
   </head>
-  <body>
+<body>
+  <body data-spy="scroll" data-target="#myScrollspy" data-offset="70">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">FSAMS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index2.html">Home</a></li>
+        <li><a href="#">Simulate Fire</a></li>
+        <li><a href="#">Simulate Electrical Fire</a></li>
+        <li><a href='#'> Simulate Active Shooter</a></li>
+        <li><a href="#">Simulate Fire Drill</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<!--
     <div id="container">
       <nav>
         <section class="top-panel">
-          <a href="#">Home</a>
+          <a href="index2.html">Home</a>
           <a href="#">Simulate Fire</a>
           <a href="#">Simulate Electrical Fire</a>
           <a href="#">Simulate Active Shooter</a>
@@ -24,14 +140,102 @@
           </div>
         </section>
 
-      </nav>
-      <div class="bottom">
-        <div class="left">
-          <p>command line messages here...</p>
-          <a href="https://www.phpied.com/3-ways-to-define-a-javascript-class/">intro to javascript</a>
 
-        </div>
+
+      </nav>
+        -->
+
+
+        <!--
+       <input type="button" value="Start Timer" onclick="display_c(86501);"/> | <input type="button" value="End Timer" onclick="stop();"/>
+        <span id='ct' style="background-color: #FFFF00"></span> -->
+<!-- EDDDDDDITTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT THISSSSSSSSSSSSSSSSSSSSSSSS
+        <div class="container-fluid">
+          <div class="row content">
+
+            <div class="clock-panel">
+            <span> Time Elapsed Since Alert: </span>
+            <p id="demo"></p>
+            <div class = "StopW">
+            <button onclick="clearInterval(myVar)">Stop time</button>
+            </div>
+              <script>
+               var myVar = setInterval(myTimer, 1000);
+               function myTimer() {
+                 var d = new Date();
+                 document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+                 }
+              </script>
+            </div>
+<!--
+            <div class="col-sm-2 sidenav">
+              <h3>John's Blog</h3>
+              <h3>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#section1">Home</a></li>
+                <li><a href="#section2">Friends</a></li>
+              </ul><br>
+            </h3>
+            </div>
+          -->
+<div class="col-sm-2 sidenav">
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#section41">Section 4-1</a></li>
+            <li><a href="#section42">Section 4-2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="col-sm-9">
+      <div id="section1">
+        <h1>Section 1</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section2">
+        <h1>Section 2</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section3">
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section41">
+        <h1>Section 4-1</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section42">
+        <h1>Section 4-2</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--
+
+    <div class="col-sm-8 text-left">
+        <div class="bottom">
+          <div class="left">
+            <p>command line messages here...</p>
+            <a href="https://www.phpied.com/3-ways-to-define-a-javascript-class/">intro to javascript</a>
+
+          </div>
+      </div>
+
+
         <div class="spacer"></div> <!-- creates blank space between divs-->
+        <!--
         <div class="grid-container">
           <div class="middle">
             <div class="grid-item" id="box1">1</div>
@@ -376,6 +580,7 @@
           </div>
         </div>
         <div class="spacer"></div> <!-- creates blank space between divs-->
+        <!--
         <div class="right">
           <p>this will contain list of zones and their components</p>
         </div>

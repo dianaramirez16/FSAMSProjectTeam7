@@ -1,0 +1,97 @@
+/* color palette reference https://colorhunt.co/palette/158462 */
+.clock-panel p, span, button  {
+		color:yellow;
+		font-size: 32px;
+		padding: 0px 20px;
+		font-family: 'Dosis', sans-serif;
+}
+
+body {
+	color: #ff9340;
+}
+
+a {
+	font-size: 32px;
+	color: #34ebc9;
+	font-family: 'Dosis', sans-serif;
+	text-decoration: none;
+	padding: 0px 10px;
+}
+
+.top-panel {
+	padding: 10px 10px;
+	text-align: left;
+	width: 98.5%;
+	margin-bottom: 10px;
+	border: 4px double #ff4d00;
+	height: auto;
+}
+
+.clock-panel{
+	float: right;
+	margin: 0 40px 0 0;
+}
+
+.bottom{
+	width: 100%;
+	height: vh;
+	display: -webkit-flex; /* works on safari*/
+
+}
+
+.left{
+	display: inline-block;
+	height: 500px;
+	width: 20%;
+	border: 7px inset #ff4d00;
+	background-color: #413f41;
+}
+
+.middle{
+	display: inline-block;
+	height: 696px;
+	width: 1030px;
+	border: 6px inset #34ebc9;
+	background-image: url("../images/buildingblueprint.png");
+	background-repeat: no-repeat;
+	background-attachment: relative;
+	background-position: center;
+}
+
+.right {
+	width: 20%;
+	border: 7px inset #ff4d00;
+}
+
+
+.grid-container > div { /*use this syntax to override parent div's sstyle*/
+	display: inline-grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; /*26 columns*/
+	grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+	grid-gap: 0px;
+	background-color: #443737;
+	padding: 0px;
+}
+
+.spacer {
+	width:2%;
+}
+
+
+.grid-item {
+	border: 1px solid rgba(117, 211, 255, .3);
+	height: 31px;
+	padding: 7.5pt;
+	text-align: center;
+	font-size: 8px;
+}
+
+.panell {
+
+
+}
+
+.clock {
+    float: inherit;
+    margin: 0 40px 0 0;
+}
