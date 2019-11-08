@@ -21,6 +21,7 @@
 
 
 
+
 /* color palette reference https://colorhunt.co/palette/158462 */
 .clock-panel p, span  {
 		color:yellow;
@@ -201,16 +202,16 @@ body {
 }
 
 .hallwayGrid {
-
+/*
   box-sizing: border-box
-	outline-inset:2px solid orange;
+	outline-inset:2px solid orange; */
 	background-color: rgba(0, 170, 255, 0.4);
 }
-
 .lightPath {
 
   outline: 5px solid yellow;
-  background-color: rbga(255, 236, 61, .4);
+  background-image: url("..images/yellowArrow.png");
+
 }
 
 button {

@@ -25,11 +25,18 @@ alarm.addEventListener('click', event => {
            }
     }
 })
-
+//list of rooms turned into arrays
 const room1List = document.querySelectorAll('.room1Grid');
-var myArr = Array.from(room1List);
-getRandomInt(myArr.length)
-console.log("length array" + myArr.length)
+const room2List = document.querySelectorAll('.room2Grid');
+const room3List = document.querySelectorAll('.room3Grid');
+const room4List = document.querySelectorAll('.room4Grid');
+const room5List = document.querySelectorAll('.room5Grid');
+const room6List = document.querySelectorAll('');
+
+
+var arrayRoom1 = Array.from(room1List);
+getRandomInt(arrayRoom1.length)
+console.log("length array" + arrayRoom1.length)
 
 function displayTime() { //creates timer
 
@@ -44,7 +51,6 @@ function displayTime() { //creates timer
   console.log("c" + seconds)
   setRoomOnFire(room1List, seconds)
 }
-console.log("disp.seconds" + displayTime());
 
 function startClock() {
   const minutes = Math.floor(time/60);
@@ -69,41 +75,23 @@ class Room {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-/*
-const room1List = document.querySelectorAll('.room1Grid');
-var myArr = Array.from(room1List);
-getRandomInt(myArr.length)
-console.log(myArr.length)
-myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"*/
-//prints all classes type and id's
-
-
-//pass array to this function
-
 
 function setRoomOnFire(room, seconds) {
-
-  startClock()
   var randomStart = getRandomInt(room.length)
-  console.log("Rand" + randomStart)
-//  var displaySeconds = displayTime();
+  
   if ( seconds===5){
-
-
     var firstRed = (room[randomStart].style.backgroundColor = "Red")
-    //firstRed.style.opacity = "0.5";
-    console.log("first red=" + firstRed);
-
   }
 
-  if (seconds>8) //this will be seconds
+  if (seconds>8 && seconds < 12) //this will be seconds
   {
-    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "blue"
-    console.log("secondred=" + secondRed);
+    var secondRed = room[randomStart].style.backgroundColor = "orange"
+
   }
     //declare array of grids contained in the room
     //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*
+
     //status output: heat sensor going off in room () temp rising abnormally
     //status output: checking motion sensors ...
     //status output: room is empty / room has occupants
