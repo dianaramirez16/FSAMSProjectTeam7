@@ -2,8 +2,6 @@
 let time = 0;
 let clockOff = true;
 let clockID;
-var minutes = Math.floor(time/60);
-var seconds = time % 60;
 
 //const cardsList = document.querySelectorAll('.top-panel');
 function evaluateClick(clickTarget) {
@@ -80,15 +78,14 @@ myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"*/
 
 //pass array to this function
 
-
+document.getElementByClassName('lightPath').style.borderColor = "transparent";
 function setRoomOnFire(room, seconds) {
 
-  startClock()
   var randomStart = getRandomInt(room.length)
   console.log("Rand" + randomStart)
 //  var displaySeconds = displayTime();
   if ( seconds===5){
-
+      document.getElementById('boxes').style.borderColor = "yellow";
 
     var firstRed = (room[randomStart].style.backgroundColor = "Red")
     //firstRed.style.opacity = "0.5";
@@ -98,7 +95,7 @@ function setRoomOnFire(room, seconds) {
 
   if (seconds>8) //this will be seconds
   {
-    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "blue"
+    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "orange"
     console.log("secondred=" + secondRed);
   }
     //declare array of grids contained in the room

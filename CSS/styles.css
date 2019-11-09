@@ -1,4 +1,5 @@
-/* reference for button styles by manz @ https://codepen.io/manz/pen/KLPEby*/
+/* reference for button styles by manz @ https://codepen.io/manz/pen/KLPEby
+    reference for arrows on lightpath by Sarah Carney @ https://codepen.io/Sarah_C/pen/jWoEWb*/
 @use postcss-nested;
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
@@ -207,10 +208,19 @@ body {
 	background-color: rgba(0, 170, 255, 0.4);
 }
 
-.lightPath {
+.lightPath:after {
+	content: '';
+	display: block;
+	height: 10px; width: 10px;
+	border: 13px solid yellow;
+	border-width: 7px 7px 0 0;
 
-  outline: 5px solid yellow;
-  background-color: rbga(255, 236, 61, .4);
+	/* Parent's rotation also
+	   rotates transform axis */
+	/* Add width of border to Y */
+	transform: translate(5px, 2px);
+
+	/* rotate handled by parent */
 }
 
 button {
