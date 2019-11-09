@@ -6,15 +6,12 @@ let clockID;
 //const cardsList = document.querySelectorAll('.top-panel');
 function evaluateClick(clickTarget) {
     return (
-        clickTarget.classList.contains('top-panel')
+        clickTarget.classList.contains('simFire')
     );
 }
-
-
 const clock = document.querySelector('.clock');
-
-const alarm = document.querySelector(".top-panel");
-alarm.addEventListener('click', event => {
+const setFire = document.querySelector(".simFire");
+setFire.addEventListener('click', event => {
     const clickTarget = event.target;
     if (evaluateClick(clickTarget)) {
            if (clockOff) {
@@ -23,6 +20,9 @@ alarm.addEventListener('click', event => {
            }
     }
 })
+
+
+
 
 const room1List = document.querySelectorAll('.room1Grid');
 var myArr = Array.from(room1List);
@@ -78,26 +78,32 @@ myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"*/
 
 //pass array to this function
 
-document.getElementByClassName('lightPath').style.borderColor = "transparent";
+//document.getElementByClassName('lightPath').style.borderColor = "transparent";
 function setRoomOnFire(room, seconds) {
 
-  var randomStart = getRandomInt(room.length)
-  console.log("Rand" + randomStart)
+var randomStart = getRandomInt(room.length)
+console.log("Rand" + randomStart)
 //  var displaySeconds = displayTime();
-  if ( seconds===5){
-      document.getElementById('boxes').style.borderColor = "yellow";
+if ( seconds===5){
+  document.getElementById('boxes').style.borderColor = "yellow";
 
-    var firstRed = (room[randomStart].style.backgroundColor = "Red")
-    //firstRed.style.opacity = "0.5";
-    console.log("first red=" + firstRed);
+var firstRed = (room[randomStart].style.backgroundColor = "Red")
+//firstRed.style.opacity = "0.5";
+console.log("first red=" + firstRed);
 
-  }
+}
 
-  if (seconds>8) //this will be seconds
-  {
-    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "orange"
-    console.log("secondred=" + secondRed);
-  }
+if (seconds===8) //this will be seconds
+{
+var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "orange"
+console.log("secondred=" + secondRed);
+}
+
+if (seconds===15) //this will be seconds
+{
+  var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "orange"
+  console.log("secondred=" + secondRed);
+}
     //declare array of grids contained in the room
     //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*

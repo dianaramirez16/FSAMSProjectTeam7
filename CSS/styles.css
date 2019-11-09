@@ -211,16 +211,11 @@ body {
 .lightPath:after {
 	content: '';
 	display: block;
-	height: 10px; width: 10px;
+	height: 10px;
+    width: 10px;
 	border: 13px solid yellow;
 	border-width: 7px 7px 0 0;
-
-	/* Parent's rotation also
-	   rotates transform axis */
-	/* Add width of border to Y */
 	transform: translate(5px, 2px);
-
-	/* rotate handled by parent */
 }
 
 button {
