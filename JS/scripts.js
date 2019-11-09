@@ -80,21 +80,19 @@ myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"*/
 function setRoomOnFire(room, seconds) {
 
     var randomStart = getRandomInt(room.length)
-//  var displaySeconds = displayTime();
-if ( seconds===5){
-  document.getElementById('boxes').style.borderColor = "yellow";
-  var firstRed = (room[randomStart].style.backgroundColor = "Red")
-}
+    if ( seconds===5){
+      var firstRed = (room[randomStart].style.backgroundColor = "Red")
+    }
 
-if (seconds===8) //this will be seconds
-{
-var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "orange"
-}
+    if (seconds===8) //this will be seconds
+    {
+    var secondRed = room[randomStart].style.backgroundColor = "orange"
+    }
 
-if (seconds===15) //this will be seconds
-{
-  var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "yellow"
-}
+    if (seconds===15) //this will be seconds
+    {
+      var secondRed = room[randomStart].style.backgroundColor = "yellow"
+    }
     //declare array of grids contained in the room
     //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*
