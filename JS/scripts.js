@@ -62,11 +62,11 @@ function getRandomInt(max) {
 }
 
 function setRoomOnFire(room, seconds) {
-    
-    let randomStart = getRandomInt(room.length)
-    let secondSquare = randomStart+4
-    let secondSquare2 = randomStart-4
-    let thirdSquare = secondSquare+1
+
+    var randomStart = getRandomInt(room.length)
+    var secondSquare = randomStart+4
+    var secondSquare2 = randomStart-4
+    var thirdSquare = secondSquare+1
 console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ "-" + thirdSquare)
     if ( seconds===5){
         (room[randomStart].style.backgroundColor = "Red")
@@ -76,7 +76,7 @@ console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ 
     } else if ( seconds===10 && randomStart>7){
         room[secondSquare2].style.backgroundColor = "orange"
     }
-    if (seconds===25) {
+    if (seconds===15) {
         room[thirdSquare].style.backgroundColor = "yellow"
     }
 
