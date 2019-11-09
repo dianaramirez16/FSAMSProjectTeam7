@@ -27,7 +27,6 @@ setFire.addEventListener('click', event => {
 const room1List = document.querySelectorAll('.room1Grid');
 var myArr = Array.from(room1List);
 getRandomInt(myArr.length)
-console.log("length array" + myArr.length)
 
 function displayTime() { //creates timer
 
@@ -42,7 +41,6 @@ function displayTime() { //creates timer
   console.log("c" + seconds)
   setRoomOnFire(room1List, seconds)
 }
-console.log("disp.seconds" + displayTime());
 
 function startClock() {
   const minutes = Math.floor(time/60);
@@ -81,28 +79,21 @@ myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"*/
 //document.getElementByClassName('lightPath').style.borderColor = "transparent";
 function setRoomOnFire(room, seconds) {
 
-var randomStart = getRandomInt(room.length)
-console.log("Rand" + randomStart)
+    var randomStart = getRandomInt(room.length)
 //  var displaySeconds = displayTime();
 if ( seconds===5){
   document.getElementById('boxes').style.borderColor = "yellow";
-
-var firstRed = (room[randomStart].style.backgroundColor = "Red")
-//firstRed.style.opacity = "0.5";
-console.log("first red=" + firstRed);
-
+  var firstRed = (room[randomStart].style.backgroundColor = "Red")
 }
 
 if (seconds===8) //this will be seconds
 {
 var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "orange"
-console.log("secondred=" + secondRed);
 }
 
 if (seconds===15) //this will be seconds
 {
-  var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "orange"
-  console.log("secondred=" + secondRed);
+  var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "yellow"
 }
     //declare array of grids contained in the room
     //randomize which grids get set on fire first
