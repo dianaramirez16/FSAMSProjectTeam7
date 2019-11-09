@@ -38,7 +38,7 @@ function displayTime() { //creates timer
   } else {
     clock.innerHTML = `${minutes}:${seconds}`;
   }
-  console.log("c" + seconds)
+console.log("c" + seconds)
   setRoomOnFire(room1List, seconds)
 }
 
@@ -56,45 +56,31 @@ function stopClock() {
   clockOff =true;
 }
 //end clock code
-// being defining rooms
-/*
-class Room {
-  constructor(name, onFire, lockedDown, sprinklers, emptyRoom)
-}
-*/
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-/*
-const room1List = document.querySelectorAll('.room1Grid');
-var myArr = Array.from(room1List);
-getRandomInt(myArr.length)
-console.log(myArr.length)
-myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"*/
-//prints all classes type and id's
 
-
-//pass array to this function
-
-//document.getElementByClassName('lightPath').style.borderColor = "transparent";
 function setRoomOnFire(room, seconds) {
-
-    var randomStart = getRandomInt(room.length)
+    
+    let randomStart = getRandomInt(room.length)
+    let secondSquare = randomStart+4
+    let secondSquare2 = randomStart-4
+    let thirdSquare = secondSquare+1
+console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ "-" + thirdSquare)
     if ( seconds===5){
-      var firstRed = (room[randomStart].style.backgroundColor = "Red")
+        (room[randomStart].style.backgroundColor = "Red")
+    }
+    if (seconds===10 && randomStart<8 ) {
+        room[secondSquare].style.backgroundColor = "orange"
+    } else if ( seconds===10 && randomStart>7){
+        room[secondSquare2].style.backgroundColor = "orange"
+    }
+    if (seconds===25) {
+        room[thirdSquare].style.backgroundColor = "yellow"
     }
 
-    if (seconds===8) //this will be seconds
-    {
-    var secondRed = room[randomStart].style.backgroundColor = "orange"
-    }
 
-    if (seconds===15) //this will be seconds
-    {
-      var secondRed = room[randomStart].style.backgroundColor = "yellow"
-    }
-    //declare array of grids contained in the room
-    //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*
     //status output: heat sensor going off in room () temp rising abnormally
     //status output: checking motion sensors ...
