@@ -2,21 +2,16 @@
 let time = 0;
 let clockOff = true;
 let clockID;
-var minutes = Math.floor(time/60);
-var seconds = time % 60;
 
 //const cardsList = document.querySelectorAll('.top-panel');
 function evaluateClick(clickTarget) {
     return (
-        clickTarget.classList.contains('top-panel')
+        clickTarget.classList.contains('simFire')
     );
 }
-
-
 const clock = document.querySelector('.clock');
-
-const alarm = document.querySelector(".top-panel");
-alarm.addEventListener('click', event => {
+const setFire = document.querySelector(".simFire");
+setFire.addEventListener('click', event => {
     const clickTarget = event.target;
     if (evaluateClick(clickTarget)) {
            if (clockOff) {
@@ -26,10 +21,12 @@ alarm.addEventListener('click', event => {
     }
 })
 
+
+
+
 const room1List = document.querySelectorAll('.room1Grid');
 var myArr = Array.from(room1List);
 getRandomInt(myArr.length)
-console.log("length array" + myArr.length)
 
 function displayTime() { //creates timer
 
@@ -41,10 +38,9 @@ function displayTime() { //creates timer
   } else {
     clock.innerHTML = `${minutes}:${seconds}`;
   }
-  console.log("c" + seconds)
+console.log("c" + seconds)
   setRoomOnFire(room1List, seconds)
 }
-console.log("disp.seconds" + displayTime());
 
 function startClock() {
   const minutes = Math.floor(time/60);
@@ -60,49 +56,31 @@ function stopClock() {
   clockOff =true;
 }
 //end clock code
-// being defining rooms
-/*
-class Room {
-  constructor(name, onFire, lockedDown, sprinklers, emptyRoom)
-}
-*/
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-/*
-const room1List = document.querySelectorAll('.room1Grid');
-var myArr = Array.from(room1List);
-getRandomInt(myArr.length)
-console.log(myArr.length)
-myArr[(getRandomInt(myArr.length))].style.backgroundColor = "Red"*/
-//prints all classes type and id's
-
-
-//pass array to this function
-
 
 function setRoomOnFire(room, seconds) {
 
-  startClock()
-  var randomStart = getRandomInt(room.length)
-  console.log("Rand" + randomStart)
-//  var displaySeconds = displayTime();
-  if ( seconds===5){
+    var randomStart = getRandomInt(room.length)
+    var secondSquare = randomStart+4
+    var secondSquare2 = randomStart-4
+    var thirdSquare = secondSquare+1
+console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ "-" + thirdSquare)
+    if ( seconds===5){
+        (room[randomStart].style.backgroundColor = "Red")
+    }
+    if (seconds===10 && randomStart<8 ) {
+        room[secondSquare].style.backgroundColor = "orange"
+    } else if ( seconds===10 && randomStart>7){
+        room[secondSquare2].style.backgroundColor = "orange"
+    }
+    if (seconds===15) {
+        room[thirdSquare].style.backgroundColor = "yellow"
+    }
 
 
-    var firstRed = (room[randomStart].style.backgroundColor = "Red")
-    //firstRed.style.opacity = "0.5";
-    console.log("first red=" + firstRed);
-
-  }
-
-  if (seconds>8) //this will be seconds
-  {
-    var secondRed = room[(getRandomInt(room.length))].style.backgroundColor = "blue"
-    console.log("secondred=" + secondRed);
-  }
-    //declare array of grids contained in the room
-    //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*
     //status output: heat sensor going off in room () temp rising abnormally
     //status output: checking motion sensors ...
