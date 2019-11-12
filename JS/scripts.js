@@ -15,7 +15,7 @@ var styles = `
 var styleSheet = document.createElement("style")
 styleSheet.type = "text/css"
 styleSheet.innerText = styles
-document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
+//document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
 
 
 

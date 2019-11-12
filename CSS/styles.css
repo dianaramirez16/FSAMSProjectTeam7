@@ -206,7 +206,7 @@ button {
   background: var(--darkgrayColor);
   border: 0;
   font-family: var(--fontName);
-  font-size: 32px;
+  font-size: 28px;
   color: var(--grayColor);
   outline: 0;
   padding: 2px;
@@ -253,7 +253,7 @@ button {
 .view-panel {
     position: absolute;
 	height: 205px;
-	width: 1030px;
+	width: 1010px;
 	border: 6px inset #34ebc9;
     padding:10px;
 }
