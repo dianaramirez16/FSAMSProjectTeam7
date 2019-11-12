@@ -1,4 +1,5 @@
-/* reference for button styles by manz @ https://codepen.io/manz/pen/KLPEby*/
+/* reference for button styles by manz @ https://codepen.io/manz/pen/KLPEby
+    reference for arrows on lightpath by Sarah Carney @ https://codepen.io/Sarah_C/pen/jWoEWb*/
 @use postcss-nested;
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
@@ -101,13 +102,6 @@ a {
 	background-position: center;
 }
 
-.view-panel {
-	display: inline-block;
-	height: 205px;
-	width: 1030px;
-	border: 6px inset #34ebc9;
-}
-
 .right {
 	width: 450px;
 	border: 7px inset #ff4d00;
@@ -134,7 +128,7 @@ body {
 }
 
 .grid-item {
-	border: 1px solid rgba(117, 211, 255, .3);
+	border: 1.2px solid rgba(117, 211, 255, .3);
 	height: 31px;
 	padding: 7.5pt;
 	text-align: center;
@@ -207,18 +201,22 @@ body {
 	outline-inset:2px solid orange; */
 	background-color: rgba(0, 170, 255, 0.4);
 }
+<<<<<<< HEAD
 .lightPath {
 
   outline: 5px solid yellow;
   background-image: url("..images/yellowArrow.png");
 
 }
+=======
+
+>>>>>>> f6d6f87fca06b4a19aa38bca47774ad95c6bb0c9
 
 button {
   background: var(--darkgrayColor);
   border: 0;
   font-family: var(--fontName);
-  font-size: 32px;
+  font-size: 28px;
   color: var(--grayColor);
   outline: 0;
   padding: 2px;
@@ -260,4 +258,23 @@ button {
 .zone {
   display: none;
   z-index: -10;
+}
+
+.view-panel {
+    position: absolute;
+	height: 205px;
+	width: 1010px;
+	border: 6px inset #34ebc9;
+    padding:10px;
+}
+
+.leftColumn {
+    width: 515px;
+    position: fixed;
+    border:1px solid blue;
+}
+.rightColumn {
+    padding-left: 540px;
+    width: 515px;
+     border:1px solid blue;
 }

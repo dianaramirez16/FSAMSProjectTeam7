@@ -1,22 +1,39 @@
+// Your CSS as text
+var styles = `
+    .lightPath::after {
+        content: '';
+        display: block;
+        height: 10px;
+        width: 10px;
+        border: 13px solid yellow;
+        border-width: 7px 7px 0 0;
+        transform: translate(5px, 2px);
+
+    }
+`
+
+var styleSheet = document.createElement("style")
+styleSheet.type = "text/css"
+styleSheet.innerText = styles
+//document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
+
+
+
+
 //clock variables
 let time = 0;
 let clockOff = true;
 let clockID;
-var minutes = Math.floor(time/60);
-var seconds = time % 60;
 
 //const cardsList = document.querySelectorAll('.top-panel');
 function evaluateClick(clickTarget) {
     return (
-        clickTarget.classList.contains('top-panel')
+        clickTarget.classList.contains('simFire')
     );
 }
-
-
 const clock = document.querySelector('.clock');
-
-const alarm = document.querySelector(".top-panel");
-alarm.addEventListener('click', event => {
+const setFire = document.querySelector(".simFire");
+setFire.addEventListener('click', event => {
     const clickTarget = event.target;
     if (evaluateClick(clickTarget)) {
            if (clockOff) {
@@ -48,7 +65,7 @@ function displayTime() { //creates timer
   } else {
     clock.innerHTML = `${minutes}:${seconds}`;
   }
-  console.log("c" + seconds)
+console.log("c" + seconds)
   setRoomOnFire(room1List, seconds)
 }
 
@@ -66,30 +83,30 @@ function stopClock() {
   clockOff =true;
 }
 //end clock code
-// being defining rooms
-/*
-class Room {
-  constructor(name, onFire, lockedDown, sprinklers, emptyRoom)
-}
-*/
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
 function setRoomOnFire(room, seconds) {
-  var randomStart = getRandomInt(room.length)
-  
-  if ( seconds===5){
-    var firstRed = (room[randomStart].style.backgroundColor = "Red")
-  }
+    var randomStart = getRandomInt(room.length)
+    var secondSquare = randomStart+4
+    var secondSquare2 = randomStart-4
+    var thirdSquare = secondSquare+1
+console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ "-" + thirdSquare)
+    if ( seconds===5){
+        (room[randomStart].style.backgroundColor = "Red")
+    }
+    if (seconds===10 && randomStart<8 ) {
+        room[secondSquare].style.backgroundColor = "orange"
+    } else if ( seconds===10 && randomStart>7){
+        room[secondSquare2].style.backgroundColor = "orange"
+    }
+    if (seconds===15) {
+        room[thirdSquare].style.backgroundColor = "yellow"
+    }
 
-  if (seconds>8 && seconds < 12) //this will be seconds
-  {
-    var secondRed = room[randomStart].style.backgroundColor = "orange"
 
-  }
-    //declare array of grids contained in the room
-    //randomize which grids get set on fire first
     //rooms will catch fire at different rates based on emergency type*
 
     //status output: heat sensor going off in room () temp rising abnormally
@@ -109,3 +126,11 @@ function setRoomOnFire(room, seconds) {
           //if sprinklers are effective, still call emergency services?
 
 }
+/*     let borderNone = document.getElementsByClassName('lightPath');
+    let i;
+    for (i = 0; i < borderNone.length; i++) {
+        borderNone[i].style.display = "inherit" ;
+        console.log('b' +borderNone[i])
+    }
+
+ */

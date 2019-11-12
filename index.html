@@ -10,11 +10,11 @@
 
   </head>
   <body>
-    <div id="container">
+    <div id="container"
       <nav>
         <section class="top-panel">
           <a href="#">Home</a>
-          <a href="#">Simulate Fire</a>
+          <a class="simFire" href="#">Simulate Fire</a>
           <a href="#">Simulate Electrical Fire</a>
           <a href="#">Simulate Active Shooter</a>
           <a href="#">Simulate Fire Drill</a>
@@ -42,14 +42,12 @@
           <div class="override-panel">
             <h3>Override Panel</h3>
 
-            <button>Call 911</button>
-            <button>Lock Down</button>
-            <button>Shut OFF</button>
-            <input type="checkbox" id="toggle">
-            <label for="toggle">Click me!</label>
-
+            <button id="call911">Call 911</button>
+            <button id ="lockDownButton">Lock All Doors</button>
+            <button id="shutOffButton" onclick="stopClock();">Shut OFF</button>
           </div>
         </div> <!-- end left sidebar-->
+
 
         <div class="spacer"></div> <!-- creates blank space between divs-->
         <div id="middleDivs">
@@ -397,8 +395,19 @@
             </div>
           </div>
           <div class="spacer"></div> <!-- creates blank space between divs-->
-          <div class="view-panel">contact book will go here || <br>
-          this contains the contacts for rooms to call in case of emergencies
+          <div class="view-panel">
+              <div class="leftColumn">
+                <ul style="list-style-type:none;">Room On Fire: Christine's Office<br>
+                    <li>People in the room:</li>
+                    <li>Sprinklers: active/none</li>
+                    <li>Doors: unlocked/locked</li>
+                    <li>Smoke in the room: yes / no </li>
+                </ul>
+              </div>
+              <div class ="rightColumn">
+                  <button id="callRoom">Call Room</button>
+                  <button id ="lockRooom">Lock Room Doors</button>
+              </div>
           </div>
         </div>
         <div class="spacer"></div> <!-- creates blank space between divs-->
@@ -406,6 +415,8 @@
         <div class="right">
           <h3>Building Zones</h3>
           <p>this will contain list of zones and their components</p>
+          <div class="zoneBox">
+          </div>
         </div>
 
           <!-- Testing -->
