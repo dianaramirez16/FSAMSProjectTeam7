@@ -101,13 +101,6 @@ a {
 	background-position: center;
 }
 
-.view-panel {
-	display: inline-block;
-	height: 205px;
-	width: 1030px;
-	border: 6px inset #34ebc9;
-}
-
 .right {
 	width: 450px;
 	border: 7px inset #ff4d00;
@@ -255,4 +248,23 @@ button {
 .zone {
   display: none;
   z-index: -10;
+}
+
+.view-panel {
+    position: absolute;
+	height: 205px;
+	width: 1030px;
+	border: 6px inset #34ebc9;
+    padding:10px;
+}
+
+.leftColumn {
+    width: 515px;
+    position: fixed;
+    border:1px solid blue;
+}
+.rightColumn {
+    padding-left: 540px;
+    width: 515px;
+     border:1px solid blue;
 }
