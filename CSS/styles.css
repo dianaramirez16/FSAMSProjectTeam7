@@ -134,7 +134,7 @@ body {
 }
 
 .grid-item {
-	border: 1px solid rgba(117, 211, 255, .3);
+	border: 1.2px solid rgba(117, 211, 255, .3);
 	height: 31px;
 	padding: 7.5pt;
 	text-align: center;
@@ -208,15 +208,6 @@ body {
 	background-color: rgba(0, 170, 255, 0.4);
 }
 
-.lightPath:after {
-	content: '';
-	display: block;
-	height: 10px;
-    width: 10px;
-	border: 13px solid yellow;
-	border-width: 7px 7px 0 0;
-	transform: translate(5px, 2px);
-}
 
 button {
   background: var(--darkgrayColor);

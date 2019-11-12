@@ -1,3 +1,25 @@
+// Your CSS as text
+var styles = `
+    .lightPath::after {
+        content: '';
+        display: block;
+        height: 10px;
+        width: 10px;
+        border: 13px solid yellow;
+        border-width: 7px 7px 0 0;
+        transform: translate(5px, 2px);
+
+    }
+`
+
+var styleSheet = document.createElement("style")
+styleSheet.type = "text/css"
+styleSheet.innerText = styles
+document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
+
+
+
+
 //clock variables
 let time = 0;
 let clockOff = true;
@@ -62,7 +84,6 @@ function getRandomInt(max) {
 }
 
 function setRoomOnFire(room, seconds) {
-
     var randomStart = getRandomInt(room.length)
     var secondSquare = randomStart+4
     var secondSquare2 = randomStart-4
@@ -99,3 +120,11 @@ console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ 
           //if sprinklers are effective, still call emergency services?
 
 }
+/*     let borderNone = document.getElementsByClassName('lightPath');
+    let i;
+    for (i = 0; i < borderNone.length; i++) {
+        borderNone[i].style.display = "inherit" ;
+        console.log('b' +borderNone[i])
+    }
+
+ */
