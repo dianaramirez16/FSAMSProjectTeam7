@@ -15,7 +15,7 @@ var styles = `
 var styleSheet = document.createElement("style")
 styleSheet.type = "text/css"
 styleSheet.innerText = styles
-//document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
+
 
 
 
@@ -48,7 +48,6 @@ const room2List = document.querySelectorAll('.room2Grid');
 const room3List = document.querySelectorAll('.room3Grid');
 const room4List = document.querySelectorAll('.room4Grid');
 const room5List = document.querySelectorAll('.room5Grid');
-const room6List = document.querySelectorAll('');
 
 
 var arrayRoom1 = Array.from(room1List);
@@ -89,6 +88,7 @@ function getRandomInt(max) {
 }
 
 function setRoomOnFire(room, seconds) {
+  document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
     var randomStart = getRandomInt(room.length)
     var secondSquare = randomStart+4
     var secondSquare2 = randomStart-4
@@ -126,11 +126,3 @@ console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ 
           //if sprinklers are effective, still call emergency services?
 
 }
-/*     let borderNone = document.getElementsByClassName('lightPath');
-    let i;
-    for (i = 0; i < borderNone.length; i++) {
-        borderNone[i].style.display = "inherit" ;
-        console.log('b' +borderNone[i])
-    }
-
- */

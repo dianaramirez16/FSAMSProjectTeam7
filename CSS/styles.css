@@ -201,16 +201,7 @@ body {
 	outline-inset:2px solid orange; */
 	background-color: rgba(0, 170, 255, 0.4);
 }
-<<<<<<< HEAD
-.lightPath {
 
-  outline: 5px solid yellow;
-  background-image: url("..images/yellowArrow.png");
-
-}
-=======
-
->>>>>>> f6d6f87fca06b4a19aa38bca47774ad95c6bb0c9
 
 button {
   background: var(--darkgrayColor);
@@ -219,7 +210,7 @@ button {
   font-size: 28px;
   color: var(--grayColor);
   outline: 0;
-  padding: 2px;
+  padding: 4px;
   margin-right: 10px;
   box-shadow: 10px 8px 0 black;
   text-decoration: none;
