@@ -69,7 +69,7 @@ a {
 
 .commandContainer{
 	display: inline-block;
-	height: 500px;
+	height: 600px;
 	width: 480px;
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
@@ -79,7 +79,7 @@ a {
 
 .override-panel {
 	display: inline-block;
-	height: 400px;
+	height: 300px;
 	width: 480px;
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
@@ -252,11 +252,10 @@ button {
 }
 
 .view-panel {
-    position: absolute;
-	height: 205px;
+	height: 200px;
 	width: 1010px;
 	border: 6px inset #34ebc9;
-    padding:10px;
+  padding:10px;
 }
 
 .leftColumn {
