@@ -270,5 +270,9 @@ button {
     padding-top: 30px;
     padding-left: 600px;
     width: 515px;
+}
 
+.right {
+    background-image: url("images/zones.png") no-repeat;
+    background-position: bottom;
 }
