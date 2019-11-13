@@ -202,6 +202,9 @@ body {
 	background-color: rgba(0, 170, 255, 0.4);
 }
 
+#callRoom2 {
+  margin-right: 40px;
+}
 
 button {
   background: var(--darkgrayColor);
@@ -264,7 +267,8 @@ button {
     border:1px solid blue;
 }
 .rightColumn {
-    padding-left: 540px;
+    padding-top: 30px;
+    padding-left: 600px;
     width: 515px;
-     border:1px solid blue;
+
 }
