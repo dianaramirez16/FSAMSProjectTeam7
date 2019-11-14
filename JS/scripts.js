@@ -79,7 +79,49 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
+function sprinklerStatus(room){
+    const status = true;
+    const message = "Sprinklers are operational in "
+    sendText()
+return status;
+// Checks the state of the sprinkler
+}
+function heatSensorStatus(room){
+return status;
+// Checks the state of the heat sensor
+}
+function fumeSensorStatus(room){
+return status;
+// Checks the state of the smoke sensor
+}
+function motionSensorStatus(room){
+return status;
+// Checks the state of the motion sensor
+}
+function alarmStatus(room){
+    if (status == true ) {
+        return true;
+    } else {
+        return false;
+    }
+// Checks the state of the alarm
+}
+pathwayStatus(){
+if(alarmStatus() == true || sprinklerStatus() == true)
+return true;
+else
+return false;
+// Checks to see state of light pathway
+}
+
+
+
+
+
+
 function setRoomOnFire(room, seconds) {
+    var message = room + ""
+    sendText()
   document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
     var randomStart = getRandomInt(room.length)
     var secondSquare = randomStart+4
@@ -118,8 +160,7 @@ console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ 
           //if sprinklers are effective, still call emergency services?
 
 }
-var message1 = "hello world"
-sendText(message1)
+
 //console.log("innerh " + controlPanel.textContent);
 function sendText(message) {
     var node = document.createElement("P")
