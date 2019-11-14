@@ -43,6 +43,15 @@ const room2List = document.querySelectorAll('.room2Grid');
 const room3List = document.querySelectorAll('.room3Grid');
 const room4List = document.querySelectorAll('.room4Grid');
 const room5List = document.querySelectorAll('.room5Grid');
+const room6List = document.querySelectorAll('.kitchenGrid');
+const room7List = document.querySelectorAll('.meeting1Grid');
+const room8List = document.querySelectorAll('.classroomGrid');
+const room9List = document.querySelectorAll('.computerLabGrid');
+const room10List = document.querySelectorAll('.middleRoomGrid');
+const room11List = document.querySelectorAll('.mainRoomGrid');
+const room12List = document.querySelectorAll('.girlGrid');
+const room13List = document.querySelectorAll('.boyGrid');
+const room14List = document.querySelectorAll('.workAreaGrid');
 
 // arrays saved to objects for rooms
 var arrayRoom1 = Array.from(room1List);
@@ -50,8 +59,16 @@ var arrayRoom2 = Array.from(room2List);
 var arrayRoom3 = Array.from(room3List);
 var arrayRoom4 = Array.from(room4List);
 var arrayRoom5 = Array.from(room5List);
-
-
+var arrayRoom6 = Array.from(room6List);
+var arrayRoom7 = Array.from(room7List);
+var arrayRoom8 = Array.from(room8List);
+var arrayRoom9 = Array.from(room9List);
+var arrayRoom10 = Array.from(room10List);
+var arrayRoom11 = Array.from(room11List);
+var arrayRoom12 = Array.from(room12List);
+var arrayRoom13 = Array.from(room13List);
+var arrayRoom14 = Array.from(room14List);
+//room objects
 var ChristinesOffice = {
     grids: arrayRoom1,
     size: arrayRoom1.length,
@@ -65,7 +82,7 @@ var ChristinesOffice = {
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
-    fumeSensorStatus: true,
+    fumesSensorStatus: true,
     sprinklers: true,
     sprinklerStatus: true,
     phone: true // phone is callable
@@ -83,7 +100,7 @@ var GordonsOffice = {
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
-    fumeSensorStatus: true,
+    fumesSensorStatus: true,
     sprinklers: true,
     sprinklerStatus: true,
     phone: true // phone is callable
@@ -101,14 +118,14 @@ var ArtRoom = {
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
-    fumeSensorStatus: true,
+    fumesSensorStatus: true,
     sprinklers: true,
     sprinklerStatus: true,
     phone: true // phone is callable
 }
 var CarolsOffice = {
     grids: arrayRoom4,
-    size: arrayRoom4.length,
+    size: arrayRoom4.length, //how many grid squares inside
     zone: 3,
     maxCapacity: 8,
     isEmpty: false,
@@ -119,17 +136,17 @@ var CarolsOffice = {
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
-    fumeSensorStatus: true,
+    fumesSensorStatus: true,
     sprinklers: true,
     sprinklerStatus: true,
     phone: true // phone is callable
 }
 var Office = {
-    grids: arrayRoom4,
-    size: arrayRoom4.length,
+    grids: arrayRoom5,
+    size: arrayRoom5.length, //how many grid squares inside
     zone: 4,
     maxCapacity: 8,
-    isEmpty: false,
+    isEmpty: true,
     humanPresence: 0,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
@@ -137,17 +154,173 @@ var Office = {
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
-    fumeSensorStatus: true,
+    fumesSensorStatus: true,
     sprinklers: true,
     sprinklerStatus: true,
     phone: true // phone is callable
 }
-
-
-
-
-
-
+var Kitchen = {
+    grids: arrayRoom6,
+    size: arrayRoom6.length, //how many grid squares inside
+    zone: 1,
+    maxCapacity: 8,
+    isEmpty: false,
+    humanPresence: 2,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: false // phone is callable
+}
+var MeetingRoom = {
+    grids: arrayRoom7,
+    size: arrayRoom7.length, //how many grid squares inside
+    zone: 1,
+    maxCapacity: 8,
+    isEmpty: true,
+    humanPresence: 0,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: true // phone is callable
+}
+var Classroom = {
+    grids: arrayRoom8,
+    size: arrayRoom8.length, //how many grid squares inside
+    zone: 2,
+    maxCapacity: 20,
+    isEmpty: true,
+    humanPresence: 0,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: true // phone is callable
+}
+var ComputerLab = {
+    grids: arrayRoom9,
+    size: arrayRoom9.length, //how many grid squares inside
+    zone: 2,
+    maxCapacity: 20,
+    isEmpty: true,
+    humanPresence: 0,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: true // phone is callable
+}
+var MiddleRoom = {
+    grids: arrayRoom10,
+    size: arrayRoom10.length, //how many grid squares inside
+    zone: 4,
+    maxCapacity: 50,
+    isEmpty: false,
+    humanPresence: 5,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: true // phone is callable
+}
+var MainRoom = {
+    grids: arrayRoom11,
+    size: arrayRoom11.length, //how many grid squares inside
+    zone: 4,
+    maxCapacity: 50,
+    isEmpty: false,
+    humanPresence: 8,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: true // phone is callable
+}
+var GirlBathroom = {
+    grids: arrayRoom12,
+    size: arrayRoom12.length, //how many grid squares inside
+    zone: 2,
+    maxCapacity: 6,
+    isEmpty: true,
+    humanPresence: 0,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: false // phone is callable
+}
+var BoyBathroom = {
+    grids: arrayRoom13,
+    size: arrayRoom13.length, //how many grid squares inside
+    zone: 2,
+    maxCapacity: 6,
+    isEmpty: true,
+    humanPresence: 0,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: false // phone is callable
+}
+var workAreas = {
+    grids: arrayRoom14,
+    size: arrayRoom14.length, //how many grid squares inside
+    zone: 2,
+    maxCapacity: 10,
+    isEmpty: true,
+    humanPresence: 0,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumesSensorStatus: true,
+    sprinklers: false,
+    sprinklerStatus: false,
+    phone: true // phone is callable
+}
 
 function displayTime() { //creates timer
 
@@ -192,7 +365,7 @@ function heatSensorStatus(room){
 return status;
 // Checks the state of the heat sensor
 }
-function fumeSensorStatus(room){
+function fumesSensorStatus(room){
 return status;
 // Checks the state of the smoke sensor
 }
