@@ -44,8 +44,110 @@ const room3List = document.querySelectorAll('.room3Grid');
 const room4List = document.querySelectorAll('.room4Grid');
 const room5List = document.querySelectorAll('.room5Grid');
 
+// arrays saved to objects for rooms
 var arrayRoom1 = Array.from(room1List);
-getRandomInt(arrayRoom1.length)
+var arrayRoom2 = Array.from(room2List);
+var arrayRoom3 = Array.from(room3List);
+var arrayRoom4 = Array.from(room4List);
+var arrayRoom5 = Array.from(room5List);
+
+
+var ChristinesOffice = {
+    grids: arrayRoom1,
+    size: arrayRoom1.length,
+    zone: 1,
+    maxCapacity: 8,
+    isEmpty: false,
+    humanPresence: 1,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumeSensorStatus: true,
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: true // phone is callable
+}
+var GordonsOffice = {
+    grids: arrayRoom2,
+    size: arrayRoom2.length,
+    zone: 1,
+    maxCapacity: 8,
+    isEmpty: false,
+    humanPresence: 1,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumeSensorStatus: true,
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: true // phone is callable
+}
+var ArtRoom = {
+    grids: arrayRoom3,
+    size: arrayRoom3.length,
+    zone: 1,
+    maxCapacity: 8,
+    isEmpty: false,
+    humanPresence: 4,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumeSensorStatus: true,
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: true // phone is callable
+}
+var CarolsOffice = {
+    grids: arrayRoom4,
+    size: arrayRoom4.length,
+    zone: 3,
+    maxCapacity: 8,
+    isEmpty: false,
+    humanPresence: 1,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumeSensorStatus: true,
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: true // phone is callable
+}
+var Office = {
+    grids: arrayRoom4,
+    size: arrayRoom4.length,
+    zone: 4,
+    maxCapacity: 8,
+    isEmpty: false,
+    humanPresence: 0,
+    lockStatus: false,
+    heatSensor: true, //contains heat sensor
+    heatSensorStatus: true, //heat sensor is working
+    motionSensor: true,
+    motionSensorStatus: true,
+    fumesSensor: true,
+    fumeSensorStatus: true,
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: true // phone is callable
+}
+
+
+
+
+
+
 
 function displayTime() { //creates timer
 
@@ -106,11 +208,12 @@ function alarmStatus(room){
     }
 // Checks the state of the alarm
 }
-pathwayStatus(){
-if(alarmStatus() == true || sprinklerStatus() == true)
-return true;
-else
-return false;
+function pathwayStatus(){
+    if(alarmStatus(room) == true || sprinklerStatus(room) == true) {
+        return true;
+    } else {
+    return false;
+    }
 // Checks to see state of light pathway
 }
 
