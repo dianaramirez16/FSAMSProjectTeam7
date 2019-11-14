@@ -67,13 +67,13 @@ a {
 	height: 100%;
 }
 
-.commandContainer{
+#commandContainer {
 	display: inline-block;
 	height: 600px;
 	width: 480px;
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
-  padding-left: 5%;
+    padding-left: 5%;
 
 }
 
@@ -263,7 +263,7 @@ button {
 
 .leftColumn {
     width: 515px;
-    position: fixed;
+    position: absolute;
     border:1px solid blue;
 }
 .rightColumn {

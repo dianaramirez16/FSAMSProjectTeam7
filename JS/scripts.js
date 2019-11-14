@@ -1,4 +1,4 @@
-// Your CSS as text
+// lightpath styles
 var styles = `
     .lightPath::after {
         content: '';
@@ -11,14 +11,9 @@ var styles = `
 
     }
 `
-
 var styleSheet = document.createElement("style")
 styleSheet.type = "text/css"
 styleSheet.innerText = styles
-
-
-
-
 
 //clock variables
 let time = 0;
@@ -49,10 +44,8 @@ const room3List = document.querySelectorAll('.room3Grid');
 const room4List = document.querySelectorAll('.room4Grid');
 const room5List = document.querySelectorAll('.room5Grid');
 
-
 var arrayRoom1 = Array.from(room1List);
 getRandomInt(arrayRoom1.length)
-console.log("length array" + arrayRoom1.length)
 
 function displayTime() { //creates timer
 
@@ -81,7 +74,6 @@ function stopClock() {
   clearInterval(clockID);
   clockOff =true;
 }
-//end clock code
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -125,4 +117,13 @@ console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ 
           //if sprinklers are ineffective or do not work to stabilize fire alarms, call emergency services
           //if sprinklers are effective, still call emergency services?
 
+}
+var message1 = "hello world"
+sendText(message1)
+//console.log("innerh " + controlPanel.textContent);
+function sendText(message) {
+    var node = document.createElement("P")
+    //var textnode = document.createTextNode(message);
+    node.innerHTML = message;
+    document.getElementById("commandContainer").appendChild(node);
 }
