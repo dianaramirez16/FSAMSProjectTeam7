@@ -71,7 +71,7 @@ a {
   font-family: var(--fontName);
   font-style: italic;
 	display: inline-block;
-  color: var(--yellowColor);
+  color: #61ff00;
 	height: 600px;
 	width: 470px;
 	border: 7px inset #ff4d00;
@@ -79,7 +79,7 @@ a {
   padding-left: 2%;
   padding-right: 2%;
   font-size: 12pt;
-  line-height: 14px;
+  line-height: 10px;
   overflow-y: auto;
 
 }
@@ -92,9 +92,9 @@ a {
 .override-panel {
 	display: inline-block;
 	height: 300px;
-	width: 480px;
+	width: 470px;
 	border: 7px inset #ff4d00;
-	background-color: #413f41;
+	background-color: transparent;
   padding-left: 5%;
 }
 
@@ -241,12 +241,24 @@ body {
   align-items: baseline;
 }
 
+#call911{
+  color: red;
+}
+
+#shutOffButton{
+  color: yellow;
+}
+
+#lockRoom {
+  color:yellow;
+}
+
 button {
   background: var(--darkgrayColor);
   border: 0;
   font-family: var(--fontName);
   font-size: 28px;
-  color: var(--grayColor);
+  color: #ffffff ;
   outline: 0;
   padding: 4px;
   margin-right: 10px;
@@ -257,7 +269,7 @@ button {
 	width: 130px;
 
   &:active {
-    color: var(--highlightColor);
+    color: var(  --cyanColor);
     position: relative;
     left: 10px;
     top: 8px;
@@ -266,7 +278,7 @@ button {
 
   &::before {
     content: "⯇ ";
-    color: var(--highlightColor);
+    color: var(  --cyanColor);
   }
 
   &::after {
