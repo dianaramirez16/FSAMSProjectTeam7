@@ -32,7 +32,6 @@
 
 body {
 	color: #ff9340;
-  white-space: nowrap;
 }
 
 a {
@@ -68,6 +67,7 @@ a {
 }
 
 #commandContainer {
+  white-space: nowrap;
   font-family: var(--fontName);
   font-style: italic;
 	display: inline-block;
@@ -208,14 +208,37 @@ body {
 }
 
 .hallwayGrid {
-/*
-  box-sizing: border-box
-	outline-inset:2px solid orange; */
 	background-color: rgba(0, 170, 255, 0.4);
 }
 
 #callRoom2 {
   margin-right: 40px;
+}
+
+#diagnostics {
+  background: var(--darkgrayColor);
+  border: 0;
+  font-family: var(--fontName);
+  font-size: 28px;
+  color: var(--grayColor);
+  outline: 0;
+  padding-top: 40px;
+  box-shadow: 10px 8px 0 black;
+  text-decoration: none;
+	height: 60px;
+	width: auto;
+  text-align: center;
+}
+
+#zonepic {
+  height: auto;
+  width: inherit;
+  opacity: .5;
+}
+
+.zoneBox {
+  height: inherit;
+  align-items: baseline;
 }
 
 button {

@@ -498,75 +498,76 @@ function sendText(message) {
     commandLine.insertBefore(node, commandLine.childNodes[0]);
 }
 
-
-lightPathStatus();
-sprinklerStatus(ChristinesOffice);
-sprinklerStatus(GordonsOffice);
-sprinklerStatus(ArtRoom);
-sprinklerStatus(CarolsOffice);
-sprinklerStatus(Office);
-sprinklerStatus(Kitchen);
-sprinklerStatus(MeetingRoom);
-sprinklerStatus(Classroom);
-sprinklerStatus(ComputerLab);
-sprinklerStatus(MiddleRoom);
-sprinklerStatus(MainRoom);
-sprinklerStatus(GirlBathroom);
-sprinklerStatus(BoyBathroom);
-sprinklerStatus(workAreas);
-heatSensorStatus(ChristinesOffice);
-heatSensorStatus(GordonsOffice);
-heatSensorStatus(ArtRoom);
-heatSensorStatus(CarolsOffice);
-heatSensorStatus(Office);
-heatSensorStatus(Kitchen);
-heatSensorStatus(MeetingRoom);
-heatSensorStatus(Classroom);
-heatSensorStatus(ComputerLab);
-heatSensorStatus(MiddleRoom);
-heatSensorStatus(MainRoom);
-heatSensorStatus(GirlBathroom);
-heatSensorStatus(BoyBathroom);
-heatSensorStatus(workAreas);
-fumesSensorStatus(ChristinesOffice)
-fumesSensorStatus(GordonsOffice)
-fumesSensorStatus(ArtRoom)
-fumesSensorStatus(CarolsOffice)
-fumesSensorStatus(Office)
-fumesSensorStatus(Kitchen)
-fumesSensorStatus(MeetingRoom)
-fumesSensorStatus(Classroom)
-fumesSensorStatus(ComputerLab)
-fumesSensorStatus(MiddleRoom)
-fumesSensorStatus(MainRoom)
-fumesSensorStatus(GirlBathroom)
-fumesSensorStatus(BoyBathroom)
-fumesSensorStatus(workAreas)
-motionSensorStatus(ChristinesOffice)
-motionSensorStatus(GordonsOffice)
-motionSensorStatus(ArtRoom)
-motionSensorStatus(CarolsOffice)
-motionSensorStatus(Office)
-motionSensorStatus(Kitchen)
-motionSensorStatus(MeetingRoom)
-motionSensorStatus(Classroom)
-motionSensorStatus(ComputerLab)
-motionSensorStatus(MiddleRoom)
-motionSensorStatus(MainRoom)
-motionSensorStatus(GirlBathroom)
-motionSensorStatus(BoyBathroom)
-motionSensorStatus(workAreas)
-alarmStatus(ChristinesOffice)
-alarmStatus(GordonsOffice)
-alarmStatus(ArtRoom)
-alarmStatus(CarolsOffice)
-alarmStatus(Office)
-alarmStatus(Kitchen)
-alarmStatus(MeetingRoom)
-alarmStatus(Classroom)
-alarmStatus(ComputerLab)
-alarmStatus(MiddleRoom)
-alarmStatus(MainRoom)
-alarmStatus(GirlBathroom)
-alarmStatus(BoyBathroom)
-alarmStatus(workAreas)
+function runDiagnostics(){
+  lightPathStatus();
+  sprinklerStatus(ChristinesOffice);
+  sprinklerStatus(GordonsOffice);
+  sprinklerStatus(ArtRoom);
+  sprinklerStatus(CarolsOffice);
+  sprinklerStatus(Office);
+  sprinklerStatus(Kitchen);
+  sprinklerStatus(MeetingRoom);
+  sprinklerStatus(Classroom);
+  sprinklerStatus(ComputerLab);
+  sprinklerStatus(MiddleRoom);
+  sprinklerStatus(MainRoom);
+  sprinklerStatus(GirlBathroom);
+  sprinklerStatus(BoyBathroom);
+  sprinklerStatus(workAreas);
+  heatSensorStatus(ChristinesOffice);
+  heatSensorStatus(GordonsOffice);
+  heatSensorStatus(ArtRoom);
+  heatSensorStatus(CarolsOffice);
+  heatSensorStatus(Office);
+  heatSensorStatus(Kitchen);
+  heatSensorStatus(MeetingRoom);
+  heatSensorStatus(Classroom);
+  heatSensorStatus(ComputerLab);
+  heatSensorStatus(MiddleRoom);
+  heatSensorStatus(MainRoom);
+  heatSensorStatus(GirlBathroom);
+  heatSensorStatus(BoyBathroom);
+  heatSensorStatus(workAreas);
+  fumesSensorStatus(ChristinesOffice)
+  fumesSensorStatus(GordonsOffice)
+  fumesSensorStatus(ArtRoom)
+  fumesSensorStatus(CarolsOffice)
+  fumesSensorStatus(Office)
+  fumesSensorStatus(Kitchen)
+  fumesSensorStatus(MeetingRoom)
+  fumesSensorStatus(Classroom)
+  fumesSensorStatus(ComputerLab)
+  fumesSensorStatus(MiddleRoom)
+  fumesSensorStatus(MainRoom)
+  fumesSensorStatus(GirlBathroom)
+  fumesSensorStatus(BoyBathroom)
+  fumesSensorStatus(workAreas)
+  motionSensorStatus(ChristinesOffice)
+  motionSensorStatus(GordonsOffice)
+  motionSensorStatus(ArtRoom)
+  motionSensorStatus(CarolsOffice)
+  motionSensorStatus(Office)
+  motionSensorStatus(Kitchen)
+  motionSensorStatus(MeetingRoom)
+  motionSensorStatus(Classroom)
+  motionSensorStatus(ComputerLab)
+  motionSensorStatus(MiddleRoom)
+  motionSensorStatus(MainRoom)
+  motionSensorStatus(GirlBathroom)
+  motionSensorStatus(BoyBathroom)
+  motionSensorStatus(workAreas)
+  alarmStatus(ChristinesOffice)
+  alarmStatus(GordonsOffice)
+  alarmStatus(ArtRoom)
+  alarmStatus(CarolsOffice)
+  alarmStatus(Office)
+  alarmStatus(Kitchen)
+  alarmStatus(MeetingRoom)
+  alarmStatus(Classroom)
+  alarmStatus(ComputerLab)
+  alarmStatus(MiddleRoom)
+  alarmStatus(MainRoom)
+  alarmStatus(GirlBathroom)
+  alarmStatus(BoyBathroom)
+  alarmStatus(workAreas)
+}
