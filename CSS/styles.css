@@ -22,7 +22,6 @@
 
 
 
-
 /* color palette reference https://colorhunt.co/palette/158462 */
 .clock-panel p, span  {
 		color:yellow;
@@ -33,6 +32,7 @@
 
 body {
 	color: #ff9340;
+  white-space: nowrap;
 }
 
 a {
@@ -77,9 +77,16 @@ a {
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
   padding-left: 2%;
-  padding-right: 3%;
-  font-size: 11pt;
-  line-height: 18px;
+  padding-right: 2%;
+  font-size: 12pt;
+  line-height: 14px;
+  overflow-y: auto;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .override-panel {
