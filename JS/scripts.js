@@ -371,9 +371,9 @@ function getRandomInt(max) {
 function sprinklerStatus(room){
     const status = room.sprinklerStatus;
     if (status ==true) {
-        var message = "Sprinklers are operational in " + room.name;
+        var message = "-Sprinklers are operational in " + room.name + "...";
     } else {
-        var message = "Sprinklers are non-operational in " + room.name;
+        var message = "-Sprinklers are non-operational in " + room.name + "...";
     }
     sendText(message);
     console.log("m" + message)
