@@ -70,7 +70,7 @@ var arrayRoom13 = Array.from(room13List);
 var arrayRoom14 = Array.from(room14List);
 //room objects
 var ChristinesOffice = {
-    name: "Christine's Office"
+    name: "Christine's Office",
     grids: arrayRoom1,
     size: arrayRoom1.length,
     zone: 1,
@@ -89,7 +89,7 @@ var ChristinesOffice = {
     phone: true // phone is callable
 }
 var GordonsOffice = {
-    name: "Gordon's Office"
+    name: "Gordon's Office",
     grids: arrayRoom2,
     size: arrayRoom2.length,
     zone: 1,
@@ -108,7 +108,7 @@ var GordonsOffice = {
     phone: true // phone is callable
 }
 var ArtRoom = {
-    name: "Art Room/ Outreach Classroom"
+    name: "Art Room/ Outreach Classroom",
     grids: arrayRoom3,
     size: arrayRoom3.length,
     zone: 1,
@@ -127,7 +127,7 @@ var ArtRoom = {
     phone: true // phone is callable
 }
 var CarolsOffice = {
-    name: "Carol's Office"
+    name: "Carol's Office",
     grids: arrayRoom4,
     size: arrayRoom4.length, //how many grid squares inside
     zone: 3,
@@ -146,7 +146,7 @@ var CarolsOffice = {
     phone: true // phone is callable
 }
 var Office = {
-    name: "General Use Office"
+    name: "General Use Office",
     grids: arrayRoom5,
     size: arrayRoom5.length, //how many grid squares inside
     zone: 4,
@@ -165,7 +165,7 @@ var Office = {
     phone: true // phone is callable
 }
 var Kitchen = {
-    name: "Kitchen"
+    name: "Kitchen",
     grids: arrayRoom6,
     size: arrayRoom6.length, //how many grid squares inside
     zone: 1,
@@ -184,7 +184,7 @@ var Kitchen = {
     phone: false // phone is callable
 }
 var MeetingRoom = {
-    name: "Meeting/Tutoring Room"
+    name: "Meeting/Tutoring Room",
     grids: arrayRoom7,
     size: arrayRoom7.length, //how many grid squares inside
     zone: 1,
@@ -203,7 +203,7 @@ var MeetingRoom = {
     phone: true // phone is callable
 }
 var Classroom = {
-    name: "Outreach Classroom"
+    name: "Outreach Classroom",
     grids: arrayRoom8,
     size: arrayRoom8.length, //how many grid squares inside
     zone: 2,
@@ -222,7 +222,7 @@ var Classroom = {
     phone: true // phone is callable
 }
 var ComputerLab = {
-    name: "Outreach/Computer Lab"
+    name: "Outreach/Computer Lab",
     grids: arrayRoom9,
     size: arrayRoom9.length, //how many grid squares inside
     zone: 2,
@@ -241,7 +241,7 @@ var ComputerLab = {
     phone: true // phone is callable
 }
 var MiddleRoom = {
-    name: "Middle Room & Music Room"
+    name: "Middle Room & Music Room",
     grids: arrayRoom10,
     size: arrayRoom10.length, //how many grid squares inside
     zone: 4,
@@ -260,7 +260,7 @@ var MiddleRoom = {
     phone: true // phone is callable
 }
 var MainRoom = {
-    name: "Main Room"
+    name: "Main Room",
     grids: arrayRoom11,
     size: arrayRoom11.length, //how many grid squares inside
     zone: 4,
@@ -279,7 +279,7 @@ var MainRoom = {
     phone: true // phone is callable
 }
 var GirlBathroom = {
-    name: "Girl's Bathroom"
+    name: "Girl's Bathroom",
     grids: arrayRoom12,
     size: arrayRoom12.length, //how many grid squares inside
     zone: 2,
@@ -298,7 +298,7 @@ var GirlBathroom = {
     phone: false // phone is callable
 }
 var BoyBathroom = {
-    name: "Boy's Bathroom"
+    name: "Boy's Bathroom",
     grids: arrayRoom13,
     size: arrayRoom13.length, //how many grid squares inside
     zone: 2,
@@ -317,7 +317,7 @@ var BoyBathroom = {
     phone: false // phone is callable
 }
 var workAreas = {
-    name: "Student work areas"
+    name: "Student work areas",
     grids: arrayRoom14,
     size: arrayRoom14.length, //how many grid squares inside
     zone: 2,
@@ -369,12 +369,22 @@ function getRandomInt(max) {
 }
 
 function sprinklerStatus(room){
-    const status = true;
-    const message = "Sprinklers are operational in "
-    sendText()
+    const status = room.sprinklerStatus;
+    if (status ==true) {
+        var message = "Sprinklers are operational in " + room.name;
+    } else {
+        var message = "Sprinklers are non-operational in " + room.name;
+    }
+    sendText(message);
+    console.log("m" + message)
+    console.log("sr" + status)
 return status;
 // Checks the state of the sprinkler
 }
+
+sprinklerStatus(workAreas);
+
+
 function heatSensorStatus(room){
 return status;
 // Checks the state of the heat sensor
@@ -454,7 +464,7 @@ console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ 
 //console.log("innerh " + controlPanel.textContent);
 function sendText(message) {
     var node = document.createElement("P")
-    //var textnode = document.createTextNode(message);
+    var commandLine = document.getElementById("commandContainer")
     node.innerHTML = message;
-    document.getElementById("commandContainer").appendChild(node);
+    commandLine.insertBefore(node, commandLine.childNodes[0]);
 }
