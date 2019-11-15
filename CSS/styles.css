@@ -68,6 +68,7 @@ a {
 }
 
 #commandContainer {
+  font-family: var(--fontName);
   font-style: italic;
 	display: inline-block;
   color: var(--yellowColor);
@@ -75,11 +76,10 @@ a {
 	width: 470px;
 	border: 7px inset #ff4d00;
 	background-color: #413f41;
-  padding-left: 5%;
+  padding-left: 2%;
   padding-right: 3%;
   font-size: 11pt;
-  line-height: 16px;
-
+  line-height: 18px;
 }
 
 .override-panel {

@@ -85,6 +85,7 @@ var ChristinesOffice = {
     fumesSensor: true,
     fumesSensorStatus: true,
     sprinklers: true,
+    alarm: true,
     sprinklerStatus: true,
     phone: true // phone is callable
 }
@@ -102,6 +103,7 @@ var GordonsOffice = {
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
+    alarm: true,
     fumesSensorStatus: true,
     sprinklers: true,
     sprinklerStatus: true,
@@ -115,6 +117,7 @@ var ArtRoom = {
     maxCapacity: 8,
     isEmpty: false,
     humanPresence: 4,
+    alarm: true,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
     heatSensorStatus: true, //heat sensor is working
@@ -134,6 +137,7 @@ var CarolsOffice = {
     maxCapacity: 8,
     isEmpty: false,
     humanPresence: 1,
+    alarm: true,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
     heatSensorStatus: true, //heat sensor is working
@@ -153,6 +157,7 @@ var Office = {
     maxCapacity: 8,
     isEmpty: true,
     humanPresence: 0,
+    alarm: true,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
     heatSensorStatus: true, //heat sensor is working
@@ -171,6 +176,7 @@ var Kitchen = {
     zone: 1,
     maxCapacity: 8,
     isEmpty: false,
+    alarm: true,
     humanPresence: 2,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
@@ -191,6 +197,7 @@ var MeetingRoom = {
     maxCapacity: 8,
     isEmpty: true,
     humanPresence: 0,
+    alarm: true,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
     heatSensorStatus: true, //heat sensor is working
@@ -198,8 +205,8 @@ var MeetingRoom = {
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
+    sprinklers: true,
+    sprinklerStatus: true,
     phone: true // phone is callable
 }
 var Classroom = {
@@ -211,14 +218,15 @@ var Classroom = {
     isEmpty: true,
     humanPresence: 0,
     lockStatus: false,
+    alarm: true,
     heatSensor: true, //contains heat sensor
     heatSensorStatus: true, //heat sensor is working
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
+    sprinklers: true,
+    sprinklerStatus: true,
     phone: true // phone is callable
 }
 var ComputerLab = {
@@ -230,14 +238,15 @@ var ComputerLab = {
     isEmpty: true,
     humanPresence: 0,
     lockStatus: false,
+    alarm: true,
     heatSensor: true, //contains heat sensor
     heatSensorStatus: true, //heat sensor is working
     motionSensor: true,
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
+    sprinklers: true,
+    sprinklerStatus: true,
     phone: true // phone is callable
 }
 var MiddleRoom = {
@@ -248,6 +257,7 @@ var MiddleRoom = {
     maxCapacity: 50,
     isEmpty: false,
     humanPresence: 5,
+    alarm: true,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
     heatSensorStatus: true, //heat sensor is working
@@ -255,8 +265,8 @@ var MiddleRoom = {
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
+    sprinklers: true,
+    sprinklerStatus: true,
     phone: true // phone is callable
 }
 var MainRoom = {
@@ -266,6 +276,7 @@ var MainRoom = {
     zone: 4,
     maxCapacity: 50,
     isEmpty: false,
+    alarm: true,
     humanPresence: 8,
     lockStatus: false,
     heatSensor: true, //contains heat sensor
@@ -274,16 +285,17 @@ var MainRoom = {
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
+    sprinklers: true,
+    sprinklerStatus: true,
     phone: true // phone is callable
 }
 var GirlBathroom = {
-    name: "Girl's Bathroom",
+    name: "Ladies Bathroom",
     grids: arrayRoom12,
     size: arrayRoom12.length, //how many grid squares inside
     zone: 2,
     maxCapacity: 6,
+    alarm: true,
     isEmpty: true,
     humanPresence: 0,
     lockStatus: false,
@@ -293,12 +305,12 @@ var GirlBathroom = {
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
+    sprinklers: true,
+    sprinklerStatus: true,
     phone: false // phone is callable
 }
 var BoyBathroom = {
-    name: "Boy's Bathroom",
+    name: "Lad's Bathroom",
     grids: arrayRoom13,
     size: arrayRoom13.length, //how many grid squares inside
     zone: 2,
@@ -312,9 +324,10 @@ var BoyBathroom = {
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
-    phone: false // phone is callable
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: false,
+    alarm: true
 }
 var workAreas = {
     name: "Student work areas",
@@ -331,9 +344,16 @@ var workAreas = {
     motionSensorStatus: true,
     fumesSensor: true,
     fumesSensorStatus: true,
-    sprinklers: false,
-    sprinklerStatus: false,
-    phone: true // phone is callable
+    sprinklers: true,
+    sprinklerStatus: true,
+    phone: true,
+    alarm: true
+}
+var lightPathObject = {
+    name: "emergency lightpath",
+    grids: arrayRoom13,
+    size: arrayRoom13.length, //how many grid squares inside
+    status: true // lightpath is working
 }
 
 function displayTime() { //creates timer
@@ -349,7 +369,6 @@ function displayTime() { //creates timer
 console.log("c" + seconds)
   setRoomOnFire(room1List, seconds)
 }
-
 function startClock() {
   const minutes = Math.floor(time/60);
   const seconds = time % 60;
@@ -358,16 +377,24 @@ function startClock() {
         displayTime();
     }, 1000);
 }
-
 function stopClock() {
   clearInterval(clockID);
   clockOff =true;
 }
-
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
+function lightPathStatus() {
+  const status = lightPathObject.status;
+  if (status===true) {
+      var message = "-Emergency lightpath is operational ...";
+  } else {
+      var message = "-Emergency lightpath is not operational ...";
+  }
+  sendText(message);
+return status;
 
+  }
 function sprinklerStatus(room){
     const status = room.sprinklerStatus;
     if (status ==true) {
@@ -376,58 +403,60 @@ function sprinklerStatus(room){
         var message = "-Sprinklers are non-operational in " + room.name + "...";
     }
     sendText(message);
-    console.log("m" + message)
-    console.log("sr" + status)
 return status;
 // Checks the state of the sprinkler
 }
-
-sprinklerStatus(workAreas);
-
-
 function heatSensorStatus(room){
-return status;
-// Checks the state of the heat sensor
+  const status = room.heatSensorStatus;
+  if (status ==true) {
+      var message = "-Heat sensors are operational in " + room.name + "...";
+  } else {
+      var message = "-Heat sensors are non-operational in " + room.name + "...";
+  }
+  sendText(message);
+  return status;
 }
 function fumesSensorStatus(room){
-return status;
-// Checks the state of the smoke sensor
+  const status = room.fumesSensorStatus;
+  if (status ==true) {
+      var message = "-Fume sensors are operational in " + room.name + "...";
+  } else {
+      var message = "-Fume sensors are non-operational in " + room.name + "...";
+  }
+  sendText(message);
+  return status;
+
 }
 function motionSensorStatus(room){
-return status;
-// Checks the state of the motion sensor
+  const status = room.motionSensorStatus;
+  if (status ==true) {
+      var message = "-Motion sensors are operational in " + room.name + "...";
+  } else {
+      var message = "-Motion sensors are non-operational in " + room.name + "...";
+  }
+  sendText(message);
+  return status;
 }
 function alarmStatus(room){
-    if (status == true ) {
-        return true;
-    } else {
-        return false;
-    }
-// Checks the state of the alarm
+  const status = room.alarm;
+  if (status ==true) {
+      var message = "-Alarms are operational in " + room.name + "...";
+  } else {
+      var message = "-Alarms are non-operational in " + room.name + "...";
+  }
+  sendText(message);
+  return status;
 }
-function pathwayStatus(){
-    if(alarmStatus(room) == true || sprinklerStatus(room) == true) {
-        return true;
-    } else {
-    return false;
-    }
-// Checks to see state of light pathway
-}
-
-
-
-
-
 
 function setRoomOnFire(room, seconds) {
     var message = room + ""
     sendText()
-  document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
+    document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
     var randomStart = getRandomInt(room.length)
     var secondSquare = randomStart+4
     var secondSquare2 = randomStart-4
     var thirdSquare = secondSquare+1
-console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ "-" + thirdSquare)
+    console.log("variables:" + randomStart+ "-"+ secondSquare+ "-" + secondSquare2+ "-" + thirdSquare)
     if ( seconds===5){
         (room[randomStart].style.backgroundColor = "Red")
     }
@@ -468,3 +497,76 @@ function sendText(message) {
     node.innerHTML = message;
     commandLine.insertBefore(node, commandLine.childNodes[0]);
 }
+
+
+lightPathStatus();
+sprinklerStatus(ChristinesOffice);
+sprinklerStatus(GordonsOffice);
+sprinklerStatus(ArtRoom);
+sprinklerStatus(CarolsOffice);
+sprinklerStatus(Office);
+sprinklerStatus(Kitchen);
+sprinklerStatus(MeetingRoom);
+sprinklerStatus(Classroom);
+sprinklerStatus(ComputerLab);
+sprinklerStatus(MiddleRoom);
+sprinklerStatus(MainRoom);
+sprinklerStatus(GirlBathroom);
+sprinklerStatus(BoyBathroom);
+sprinklerStatus(workAreas);
+heatSensorStatus(ChristinesOffice);
+heatSensorStatus(GordonsOffice);
+heatSensorStatus(ArtRoom);
+heatSensorStatus(CarolsOffice);
+heatSensorStatus(Office);
+heatSensorStatus(Kitchen);
+heatSensorStatus(MeetingRoom);
+heatSensorStatus(Classroom);
+heatSensorStatus(ComputerLab);
+heatSensorStatus(MiddleRoom);
+heatSensorStatus(MainRoom);
+heatSensorStatus(GirlBathroom);
+heatSensorStatus(BoyBathroom);
+heatSensorStatus(workAreas);
+fumesSensorStatus(ChristinesOffice)
+fumesSensorStatus(GordonsOffice)
+fumesSensorStatus(ArtRoom)
+fumesSensorStatus(CarolsOffice)
+fumesSensorStatus(Office)
+fumesSensorStatus(Kitchen)
+fumesSensorStatus(MeetingRoom)
+fumesSensorStatus(Classroom)
+fumesSensorStatus(ComputerLab)
+fumesSensorStatus(MiddleRoom)
+fumesSensorStatus(MainRoom)
+fumesSensorStatus(GirlBathroom)
+fumesSensorStatus(BoyBathroom)
+fumesSensorStatus(workAreas)
+motionSensorStatus(ChristinesOffice)
+motionSensorStatus(GordonsOffice)
+motionSensorStatus(ArtRoom)
+motionSensorStatus(CarolsOffice)
+motionSensorStatus(Office)
+motionSensorStatus(Kitchen)
+motionSensorStatus(MeetingRoom)
+motionSensorStatus(Classroom)
+motionSensorStatus(ComputerLab)
+motionSensorStatus(MiddleRoom)
+motionSensorStatus(MainRoom)
+motionSensorStatus(GirlBathroom)
+motionSensorStatus(BoyBathroom)
+motionSensorStatus(workAreas)
+alarmStatus(ChristinesOffice)
+alarmStatus(GordonsOffice)
+alarmStatus(ArtRoom)
+alarmStatus(CarolsOffice)
+alarmStatus(Office)
+alarmStatus(Kitchen)
+alarmStatus(MeetingRoom)
+alarmStatus(Classroom)
+alarmStatus(ComputerLab)
+alarmStatus(MiddleRoom)
+alarmStatus(MainRoom)
+alarmStatus(GirlBathroom)
+alarmStatus(BoyBathroom)
+alarmStatus(workAreas)
