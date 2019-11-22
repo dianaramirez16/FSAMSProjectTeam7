@@ -40,13 +40,13 @@ display: none;
 .popupStyles a{
 text-decoration: none;
 }
-.popup .popup911{
+.popup {
 width: 100%;
 margin: 0 auto;
 display: none;
 z-index: 101;
 }
- .popupStyles {
+.popupStyles {
 min-width: 600px;
 width: 600px;
 min-height: 500px;
@@ -80,6 +80,23 @@ width: 34px;
 }
 .popupStyles .x:hover{
 cursor: pointer;
+}
+
+.popup911 {
+  min-width: 600px;
+  width: 1400px;
+  min-height: 500px;
+  max-height: vh;
+  background: var(--darkgrayColor);
+  position: fixed;
+  z-index: 105;
+  padding: 150px 35px;
+  border: 5px solid yellow;
+  box-shadow: 0 2px 5px #000;
+}
+.popup911 > div {
+  padding-left: 200px;
+  
 }
 
 
