@@ -581,12 +581,29 @@ $(function(){
   return false;
 });
 
-
-
-
 $('.x').click(function(){
   $('.popup').hide();
   overlay.appendTo(document.body).remove();
   return false;
   });
 });
+
+$('.popup911').hide();
+
+function run911Modal(){
+  var overlay2 = $('<div id="overlay"></div>');
+  overlay2.show();
+  overlay2.appendTo(document.body);
+  $('.popup911').show();
+/*  $('.close2').click(function(){
+  $('.popup911').hide();
+  overlay2.appendTo(document.body).remove();
+  return false;*/
+}
+/*
+$('.close2').click(function(){
+  $('.popup911').hide();
+  overlay2.appendTo(document.body).remove();
+  return false;
+  });
+});*/

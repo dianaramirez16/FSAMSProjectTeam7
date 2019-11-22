@@ -16,7 +16,7 @@
       <div class='popupStyles'>
       <h1>Access: Log In</h1>
       <p>
-      We were affected by the fire next door and will remain closed until further notice.
+      you must login to access control panel
       <br/>
       <br/>
       <a href='' class='close'>Close</a>
@@ -61,7 +61,7 @@
           <div class="override-panel">
             <h3>Override Panel</h3>
 
-            <button id="call911">Call 911</button>
+            <button id="call911" onclick="run911Modal();">Call 911</button>
             <button id ="lockDownButton">Lock All</button>
             <button id="shutOffButton" onclick="stopClock();">Shut OFF</button>
           </div>
@@ -433,7 +433,7 @@
 
         <div class="right">
           <h3>Building Zones</h3>
-          <img id="zonepic" src="images/zones.png">
+          <img id="zonepic" src="images/zones.png" >
           <div class="spacer"></div>
           <div class="zoneBox">
             <div id="diagnostics" onclick="runDiagnostics();">Run Diagnostics</div>
