@@ -35,17 +35,18 @@ opacity: 0.7;
 z-index: 100;
 display: none;
 }
+
+/* popup div styles */
 .popupStyles a{
 text-decoration: none;
 }
-.popup{
+.popup .popup911{
 width: 100%;
 margin: 0 auto;
 display: none;
 z-index: 101;
 }
-
-.popupStyles{
+ .popupStyles {
 min-width: 600px;
 width: 600px;
 min-height: 500px;
@@ -64,6 +65,7 @@ font-size: 20px;
 font-family: sans-serif;
 color:#fff;
 }
+
 .popupStyles p a{
 color: #d91900;
 font-weight: bold;
