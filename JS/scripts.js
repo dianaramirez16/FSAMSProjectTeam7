@@ -366,7 +366,6 @@ function displayTime() { //creates timer
   } else {
     clock.innerHTML = `${minutes}:${seconds}`;
   }
-console.log("c" + seconds)
   setRoomOnFire(room1List, seconds)
 }
 function startClock() {
@@ -449,8 +448,8 @@ function alarmStatus(room){
 }
 
 function setRoomOnFire(room, seconds) {
-    var message = room + ""
-    sendText()
+    const message = room.name + "has ellevated heat levels. call room to \n confirm emergency or override alarm procedures"
+    sendText(message)
     document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
     var randomStart = getRandomInt(room.length)
     var secondSquare = randomStart+4
@@ -490,7 +489,6 @@ function setRoomOnFire(room, seconds) {
 
 }
 
-//console.log("innerh " + controlPanel.textContent);
 function sendText(message) {
     var node = document.createElement("P")
     var commandLine = document.getElementById("commandContainer")
@@ -571,3 +569,24 @@ function runDiagnostics(){
   alarmStatus(BoyBathroom)
   alarmStatus(workAreas)
 }
+
+$(function(){
+  var overlay = $('<div id="overlay"></div>');
+  overlay.show();
+  overlay.appendTo(document.body);
+  $('.popup').show();
+  $('.close').click(function(){
+  $('.popup').hide();
+  overlay.appendTo(document.body).remove();
+  return false;
+});
+
+
+
+
+$('.x').click(function(){
+  $('.popup').hide();
+  overlay.appendTo(document.body).remove();
+  return false;
+  });
+});
