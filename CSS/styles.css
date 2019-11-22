@@ -16,7 +16,6 @@
   --badTextColor: #fe6666;
   --highlightTextColor: #ffffff;
   --fontName: 'IBM Plex Mono', monospaced;
-
   font-family: var(--fontName);
   font-size: 18px;
 }
@@ -36,17 +35,17 @@ opacity: 0.7;
 z-index: 100;
 display: none;
 }
-.cnt223 a{
+.popupStyles a{
 text-decoration: none;
 }
 .popup{
 width: 100%;
 margin: 0 auto;
 display: none;
-
 z-index: 101;
 }
-.cnt223{
+
+.popupStyles{
 min-width: 600px;
 width: 600px;
 min-height: 500px;
@@ -58,18 +57,18 @@ padding: 15px 35px;
 border-radius: 5px;
 box-shadow: 0 2px 5px #000;
 }
-.cnt223 p{
+.popupStyles p{
 clear: both;
 /* text-align: justify; */
 font-size: 20px;
 font-family: sans-serif;
 color:#fff;
 }
-.cnt223 p a{
+.popupStyles p a{
 color: #d91900;
 font-weight: bold;
 }
-.cnt223 .x{
+.popupStyles .x{
 float: right;
 height: 35px;
 left: 22px;
@@ -77,12 +76,9 @@ position: relative;
 top: -25px;
 width: 34px;
 }
-.cnt223 .x:hover{
+.popupStyles .x:hover{
 cursor: pointer;
 }
-
-
-
 
 
 /* color palette reference https://colorhunt.co/palette/158462 */
