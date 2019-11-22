@@ -96,7 +96,7 @@ cursor: pointer;
 }
 .popup911 > div {
   padding-left: 200px;
-  
+
 }
 
 
@@ -126,7 +126,7 @@ a {
 	width: 98.5%;
 	margin-bottom: 10px;
 	border: 5px double #ff4d00;
-	height: auto;
+
 }
 
 .clock-panel{
@@ -134,6 +134,14 @@ a {
 	margin: 0 40px 0 0;
 }
 
+#clockbox {
+  float: left;
+  width: 500px;
+}
+
+#systemStatus {
+  color: #61ff00;
+}
 .bottom{
 	height: vh;
 	display: -webkit-flex; /* works on safari*/
@@ -231,62 +239,62 @@ body {
 }
 
 .room1Grid {
-	background-color: rgba(252, 255, 186, .5) ;
+	background-color: rgba(252, 255, 186, .3) ;
 }
 
 .room2Grid {
-	background-color: rgba(188, 255, 186, .5);
+	background-color: rgba(188, 255, 186, .3);
 }
 
 .room3Grid {
-	background-color: rgba(186, 30, 113, .5);
+	background-color: rgba(186, 30, 113, .3);
 }
 
 .kitchenGrid {
-	background-color: rgba(102, 204, 255, .5);
+	background-color: rgba(102, 204, 255, .3);
 }
 
 .meeting1Grid {
-	background-color: rgba(93, 68, 117, .5);
+	background-color: rgba(93, 68, 117, .3);
 }
 
 .classroomGrid {
-	background-color: rgba(154, 48, 255, .5);
+	background-color: rgba(154, 48, 255, .3);
 }
 
 .computerLabGrid {
-	background-color: rgba(255, 13, 102, .5);
+	background-color: rgba(255, 13, 102, .3);
 }
 
 .middleRoomGrid {
-	background-color: rgba(111, 168, 116, .5);
+	background-color: rgba(111, 168, 116, .3);
 }
 
 .room4Grid {
-	background-color: rgba(255, 179, 0, .5);
+	background-color: rgba(255, 179, 0, .3);
 }
 
 .room5Grid {
-	background-color: rgba(237, 117, 57, .5);
+	background-color: rgba(237, 117, 57, .3);
 }
 
 .mainRoomGrid {
-	background-color: rgba(255, 223, 207, .5 );
+	background-color: rgba(255, 223, 207, .3 );
 }
 
 .girlGrid {
-	background-color: rgba(0, 84, 148, .5);
+	background-color: rgba(0, 84, 148, .3);
 }
 
 .boyGrid {
-	background-color: rgba(0, 148, 37, .5);
+	background-color: rgba(0, 148, 37, .3);
 }
 .workAreaGrid {
-	background-color: rgba(231, 163, 255,.5);
+	background-color: rgba(231, 163, 255,.3);
 }
 
 .hallwayGrid {
-	background-color: rgba(0, 170, 255, 0.4);
+	background-color: rgba(0, 170, 255, 0.3);
 }
 
 #callRoom2 {
