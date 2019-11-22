@@ -49,9 +49,9 @@ z-index: 101;
 .cnt223{
 min-width: 600px;
 width: 600px;
-min-height: 150px;
+min-height: 500px;
 margin: 100px auto;
-background: #f3f3f3;
+background: var(--darkgrayColor);
 position: relative;
 z-index: 103;
 padding: 15px 35px;
@@ -60,10 +60,10 @@ box-shadow: 0 2px 5px #000;
 }
 .cnt223 p{
 clear: both;
-    color: #555555;
-    /* text-align: justify; */
-    font-size: 20px;
-    font-family: sans-serif;
+/* text-align: justify; */
+font-size: 20px;
+font-family: sans-serif;
+color:#fff;
 }
 .cnt223 p a{
 color: #d91900;
