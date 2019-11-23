@@ -1,6 +1,7 @@
 /* reference for button styles by manz @ https://codepen.io/manz/pen/KLPEby
     reference for arrows on lightpath by Sarah Carney @ https://codepen.io/Sarah_C/pen/jWoEWb
-    reference for popup on loadpage by pedro benoit https://codepen.io/pedrobenoit91/pen/aJGzYg*/
+    reference for popup on loadpage by pedro benoit https://codepen.io/pedrobenoit91/pen/aJGzYg
+    reference for real-time clock https://www.ricocheting.com/code/javascript/html-generator/date-time-clock*/
 @use postcss-nested;
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
