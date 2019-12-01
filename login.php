@@ -20,15 +20,4 @@
 
 
 <!Doctype HTML>
-
- <html>
- <body>
-   <form method = "post" action = "login.php">
-     Username: <br>
-     <input type = "text" name = "username"> <br>
-     Password: <br>
-     <input type = "password" name = "password"><br>
-     <input type = "submit" value = "Login!">
-   </form>
- </body>
- </html>
+<h1>Access Denied, try again in <a href="index.php">index.php</a></h1>

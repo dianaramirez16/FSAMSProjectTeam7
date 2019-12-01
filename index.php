@@ -1,3 +1,19 @@
+<?php
+  session_start();
+  $username = "user";
+  $password = "password";
+  if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    header("Location: success.php");
+  }
+  if(isset($_POST['username']) && isset($_POST['password'])) {
+    if($_POST['username'] == $username && $_POST['password'] == $password)
+    {
+      $_SESSION['loggedin'] == true;
+      header("Location: success.php");
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,22 +29,26 @@
   <body>
         <!--code for login popup-->
 
-<!--Popup no longer needed in Admin.php -->
+
     <div class='popup'>
       <div class='popupStyles'>
-        <div class = 'adminlogin' style = 'margin-left: 75px;'>
-      <h1>Access: Accepted</h1>
+        <div class = 'adminlogin' style = 'margin-left: 120px;'>
+          <h2>Access: Log In</h2>
+        </div>
+        <form method = "post" action = "login.php" class = 'form-container'>
+          Username: <br>
+          <input type = "text" name = "username" placeholder="Username"> <br>
+          Password: <br>
+          <input type = "password" name = "password" placeholder = "Password"><br>
+          <input type = "submit" value = "Login" class='btn'>
+        </form>
+
+        <p style = 'margin-left:150px;color:#e30000;'>
+      *Login to access Control Panel* </p>
       </div>
-      <h2 style = 'margin-left:130px;color:#7fff69; font-size: 20px;'>
-        Full Control Pannel Access
-      </h2>
-      <br/>
-      <br/>
-      <a href='' class='close' style = 'margin-left: 240px;'>Close</a>
       </p>
       </div>
     </div>
-
     <!--div class='popup911'>
       <div class='stylesE'>
       <h1>EMERGENCY SERVICES HAVE BEEN CALLED</h1>
@@ -37,8 +57,11 @@
     </div-->
     <!--END code for login popup-->
 
-
-    <div id="container">
+<br>
+<br>
+<br>
+<br>
+    <div id="container"
       <nav>
         <section class="top-panel">
 
@@ -47,6 +70,7 @@
           <a class="simFire" href="#">Simulate Fire</a> |
           <a href="#">Emergency Drill</a> |
           <a href="#">ACCESS</a>
+          <a href="login.php">Login</a>
           <div class="clock-panel">
             <span>Time Elapsed Since Alert:</span>
             <span class="clock">0:00</span>
