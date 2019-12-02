@@ -454,7 +454,8 @@ function call911(seconds){
 function setRoomOnFire(room, seconds, rmObj) {
     const message = rmObj.name + " has ellevated heat levels. call room to \n confirm emergency or override alarm procedures"
     sendText(message)
-
+     document.getElementById('emergencyContent').style.display="block";
+      document.getElementById('nonEmergencyContent').style.display="none";
     var randomStart = getRandomInt(room.length)
     var secondSquare = randomStart+4
     var secondSquare2 = randomStart-4
@@ -496,7 +497,7 @@ function callRoomText(){
   const message = "Calling Christine's Office"
   sendText(message)
 
-  var delayInMilliseconds = 2000; //1 second
+  var delayInMilliseconds = 5000; //1 second per 1000
 
   setTimeout(function() {
     const message = "Christine's Office is not answering. Emergency Services will be called"
@@ -607,7 +608,7 @@ $('.popup911').hide();
 
 function run911Modal(){
   document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
-  const message = "lightpath has been activated";
+  const message = "lightpath has been activated";o
   sendText(message);
   var overlay2 = $('<div id="overlay"></div>');
   overlay2.show();

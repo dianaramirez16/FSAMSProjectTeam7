@@ -395,7 +395,17 @@ button {
 	width: 1010px;
 	border: 6px inset #34ebc9;
   padding:10px;
+  display
 }
+
+.nonEmergencyContent{
+  display: block;
+}
+
+.emergencyContent {
+  display: none;
+}
+
 
 .leftColumn {
     width: 515px;
@@ -403,6 +413,11 @@ button {
 }
 .rightColumn {
     padding-top: 30px;
+    padding-left: 600px;
+    width: 515px;
+}
+.rightColumn {
+    padding-top: 0px;
     padding-left: 600px;
     width: 515px;
 }

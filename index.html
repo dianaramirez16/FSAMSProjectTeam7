@@ -419,18 +419,24 @@
           </div>
           <div class="spacer"></div> <!-- creates blank space between divs-->
           <div class="view-panel">
+            <div class="nonEmergencyContent" id="nonEmergencyContent">
+              <h2>Emergency Information will be displayed here</h2>
+              <span>all systems normal</span>
+            </div>
+            <div class="emergencyContent" id="emergencyContent">
               <div class="leftColumn">
                 <ul style="list-style-type:none;">Room On Fire: Christine's Office<br>
-                    <li>People in the room:</li>
-                    <li>Sprinklers: active/none</li>
-                    <li>Doors: unlocked/locked</li>
-                    <li>Smoke in the room: yes / no </li>
+                    <li>People in the room: 1</li>
+                    <li>Sprinklers: active</li>
+                    <li>Doors: unlocked</li>
+                    <li>Smoke in the room: yes</li>
                 </ul>
               </div>
               <div class ="rightColumn">
                   <button id="callRoom2" onclick="callRoomText();">Call Room</button>
                   <button id ="lockRoom">Lock Room</button>
               </div>
+            </div>
           </div>
         </div>
         <div class="spacer"></div> <!-- creates blank space between divs-->
