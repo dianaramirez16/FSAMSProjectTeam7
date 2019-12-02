@@ -85,10 +85,10 @@ cursor: pointer;
 
 .popup911 {
   min-width: 600px;
-  width: 1400px;
-  min-height: 500px;
+  width: 1600px;
+  min-height: 600px;
   max-height: vh;
-  background: var(--darkgrayColor);
+  background: transparent;
   position: fixed;
   z-index: 105;
   padding: 150px 35px;
@@ -423,7 +423,9 @@ button {
   z-index: 9;
 }
 
-
+.stylesE{
+  background-color: transparent;
+}
 .form-container {
   max-width: 300px;
   padding: 10px;
