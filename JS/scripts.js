@@ -365,7 +365,6 @@ function displayTime() { //creates timer
   } else {
     clock.innerHTML = `${minutes}:${seconds}`;
   }
-  call911(seconds)
   setRoomOnFire(room1List, seconds, ChristinesOffice)
 }
 function startClock() {
@@ -476,6 +475,9 @@ function setRoomOnFire(room, seconds, rmObj) {
     if (seconds===15) {
         room[thirdSquare].style.backgroundColor = "yellow"
     }
+    if(seconds===30) {
+        call911(seconds)
+    }
 
 }
 function callRoomText(){
@@ -486,6 +488,7 @@ function callRoomText(){
 
   setTimeout(function() {
     const message = "Christine's Office is not answering. Emergency Services will be called"
+    document.head.appendChild(styleSheet);
     sendText(message)
     const message2 = "Lightpath in the building has been activated. Prepare to evacuate"
     sendText(message2)
@@ -496,6 +499,7 @@ function sendText(message) {
     var node = document.createElement("P")
     var commandLine = document.getElementById("commandContainer")
     node.innerHTML = message;
+
     commandLine.insertBefore(node, commandLine.childNodes[0]);
 }
 
