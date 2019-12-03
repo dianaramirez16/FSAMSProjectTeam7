@@ -21,6 +21,10 @@
   font-size: 18px;
 }
 
+.my-info-1 p {
+    font-size: 10px;
+    font-family: monospace;
+}
 /*popup div styles */
 #overlay {
 position: fixed;
