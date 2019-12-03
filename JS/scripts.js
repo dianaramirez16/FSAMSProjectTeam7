@@ -365,8 +365,8 @@ function displayTime() { //creates timer
   } else {
     clock.innerHTML = `${minutes}:${seconds}`;
   }
-  setRoomOnFire(room1List, seconds, ChristinesOffice)
   call911(seconds)
+  setRoomOnFire(room1List, seconds, ChristinesOffice)
 }
 function startClock() {
   const minutes = Math.floor(time/60);
@@ -374,6 +374,7 @@ function startClock() {
     clockID = setInterval(() => {
         time++;
         displayTime();
+
     }, 1000);
 }
 function stopClock() {
@@ -451,11 +452,14 @@ function call911(seconds){
     run911Modal()
   }
 }
+function call911(){
+    run911Modal()
+}
 function setRoomOnFire(room, seconds, rmObj) {
     const message = rmObj.name + " has ellevated heat levels. call room to \n confirm emergency or override alarm procedures"
     sendText(message)
-     document.getElementById('emergencyContent').style.display="block";
-      document.getElementById('nonEmergencyContent').style.display="none";
+    document.getElementById('emergencyContent').style.display="block";
+    document.getElementById('nonEmergencyContent').style.display="none";
     var randomStart = getRandomInt(room.length)
     var secondSquare = randomStart+4
     var secondSquare2 = randomStart-4
@@ -502,6 +506,8 @@ function callRoomText(){
   setTimeout(function() {
     const message = "Christine's Office is not answering. Emergency Services will be called"
     sendText(message)
+    const message2 = "Lightpath in the building has been activated. Prepare to evacuate"
+    sendText(message2)
   }, delayInMilliseconds);
 
 }
@@ -608,7 +614,7 @@ $('.popup911').hide();
 
 function run911Modal(){
   document.head.appendChild(styleSheet)   //this turns on the lightpath dynamically, insert into call911 method
-  const message = "lightpath has been activated";o
+  const message = "lightpath has been activated";
   sendText(message);
   var overlay2 = $('<div id="overlay"></div>');
   overlay2.show();
