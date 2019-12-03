@@ -477,25 +477,6 @@ function setRoomOnFire(room, seconds, rmObj) {
         room[thirdSquare].style.backgroundColor = "yellow"
     }
 
-
-    //rooms will catch fire at different rates based on emergency type*
-
-    //status output: heat sensor going off in room () temp rising abnormally
-    //status output: checking motion sensors ...
-    //status output: room is empty / room has occupants
-      //if room is empty, status output: *** call emergency services
-      //if room has occupants, instruct guard to call room
-      //status output: CALL ROOM - give guard 5 seconds to call, if no call to room, call emergency services
-      //status output: countdown timer to validate emergency while call is in progress 20,19,18,17,16,15...
-        //if emergency is invalid, begin procedure to override alarm
-        //if alarm is valid, but does not need fire department,
-        //guard will override alarm systems and go to the room to check in person, or send someone else to check.
-        //status output: SYSTEM OVERRIDE, manual restart required from site
-        //if guard does not call room within 5 seconds, and room temp is still rising, turn on sprinklers
-        //status output: GUARD INACTIVE: CALLING EMERGENCY SERVICES
-          //if sprinklers are ineffective or do not work to stabilize fire alarms, call emergency services
-          //if sprinklers are effective, still call emergency services?
-
 }
 function callRoomText(){
   const message = "Calling Christine's Office"
@@ -644,3 +625,13 @@ document.getElementById('clockbox').innerHTML=clocktext;
 
 GetClock();
 setInterval(GetClock,1000);
+// toggle menu for zones list
+$(document).on('change', '.div-toggle', function() {
+  var target = $(this).data('target');
+  var show = $("option:selected", this).data('show');
+  $(target).children().addClass('hide');
+  $(show).removeClass('hide');
+});
+$(document).ready(function(){
+    $('.div-toggle').trigger('change');
+});

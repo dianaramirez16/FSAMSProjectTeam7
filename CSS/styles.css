@@ -475,5 +475,8 @@ button {
   margin-bottom:20px;
   opacity: 0.8;
   margin-left: 14px;
+}
 
+.hide {
+  display: none;
 }
