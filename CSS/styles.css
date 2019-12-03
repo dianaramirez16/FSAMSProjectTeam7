@@ -240,62 +240,62 @@ body {
 }
 
 .room1Grid {
-	background-color: rgba(252, 255, 186, .3) ;
+	background-color: rgba(252, 255, 186, .5) ;
 }
 
 .room2Grid {
-	background-color: rgba(188, 255, 186, .3);
+	background-color: rgba(188, 255, 186, .5);
 }
 
 .room3Grid {
-	background-color: rgba(186, 30, 113, .3);
+	background-color: rgba(186, 30, 113, .5);
 }
 
 .kitchenGrid {
-	background-color: rgba(102, 204, 255, .3);
+	background-color: rgba(102, 204, 255, .5);
 }
 
 .meeting1Grid {
-	background-color: rgba(93, 68, 117, .3);
+	background-color: rgba(93, 68, 117, .5);
 }
 
 .classroomGrid {
-	background-color: rgba(154, 48, 255, .3);
+	background-color: rgba(154, 48, 255, .5);
 }
 
 .computerLabGrid {
-	background-color: rgba(255, 13, 102, .3);
+	background-color: rgba(255, 13, 102, .5);
 }
 
 .middleRoomGrid {
-	background-color: rgba(111, 168, 116, .3);
+	background-color: rgba(111, 168, 116, .5);
 }
 
 .room4Grid {
-	background-color: rgba(255, 179, 0, .3);
+	background-color: rgba(255, 179, 0, .5);
 }
 
 .room5Grid {
-	background-color: rgba(237, 117, 57, .3);
+	background-color: rgba(237, 117, 57, .5);
 }
 
 .mainRoomGrid {
-	background-color: rgba(255, 223, 207, .3 );
+	background-color: rgba(255, 223, 207, .5);
 }
 
 .girlGrid {
-	background-color: rgba(0, 84, 148, .3);
+	background-color: rgba(0, 84, 148, .5);
 }
 
 .boyGrid {
-	background-color: rgba(0, 148, 37, .3);
+	background-color: rgba(0, 148, 37, .5);
 }
 .workAreaGrid {
-	background-color: rgba(231, 163, 255,.3);
+	background-color: rgba(231, 163, 255,.5);
 }
 
 .hallwayGrid {
-	background-color: rgba(0, 170, 255, 0.3);
+	background-color: rgba(0, 170, 255, 0.5);
 }
 
 #callRoom2 {
