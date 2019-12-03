@@ -37,8 +37,7 @@
     </div-->
     <!--END code for login popup-->
 
-
-    <div id="container">
+    <div id="container"
       <nav>
         <section class="top-panel">
 
@@ -47,6 +46,7 @@
           <a class="simFire" href="#">Simulate Fire</a> |
           <a href="#">Emergency Drill</a> |
           <a href="#">ACCESS</a>
+          <a href="login.php">Login</a>
           <div class="clock-panel">
             <span>Time Elapsed Since Alert:</span>
             <span class="clock">0:00</span>
@@ -422,18 +422,24 @@
           </div>
           <div class="spacer"></div> <!-- creates blank space between divs-->
           <div class="view-panel">
+            <div class="nonEmergencyContent" id="nonEmergencyContent">
+              <h2>Emergency Information will be displayed here</h2>
+              <span>all systems normal</span>
+            </div>
+            <div class="emergencyContent" id="emergencyContent">
               <div class="leftColumn">
                 <ul style="list-style-type:none;">Room On Fire: Christine's Office<br>
-                    <li>People in the room:</li>
-                    <li>Sprinklers: active/none</li>
-                    <li>Doors: unlocked/locked</li>
-                    <li>Smoke in the room: yes / no </li>
+                    <li>People in the room: 1</li>
+                    <li>Sprinklers: active</li>
+                    <li>Doors: unlocked</li>
+                    <li>Smoke in the room: yes</li>
                 </ul>
               </div>
               <div class ="rightColumn">
-                  <button id="callRoom2">Call Room</button>
+                  <button id="callRoom2" onclick="callRoomText();">Call Room</button>
                   <button id ="lockRoom">Lock Room</button>
               </div>
+            </div>
           </div>
         </div>
         <div class="spacer"></div> <!-- creates blank space between divs-->
@@ -444,6 +450,254 @@
           <div class="spacer"></div>
           <div class="zoneBox">
             <div id="diagnostics" onclick="runDiagnostics();">Run Diagnostics</div>
+            <div id="zoneList">
+              <select class="div-toggle" data-target=".my-info-1">
+                <option value="room1" data-show=".room1">Christine's Office</option>
+                <option value="room2" data-show=".room2">Gordon's Office</option>
+                <option value="room3" data-show=".room3">Art Room</option>
+                <option value="room4" data-show=".room4">Carol's Office</option>
+                <option value="room5" data-show=".room5">Office</option>
+                <option value="room6" data-show=".room6">Kitchen</option>
+                <option value="room7" data-show=".room7">Meeting Room</option>
+                <option value="room8" data-show=".room8">Classroom</option>
+                <option value="room9" data-show=".room9">Computer Lab</option>
+                <option value="room10" data-show=".room10">Middle Room</option>
+                <option value="room11" data-show=".room11">Main Room</option>
+                <option value="room12" data-show=".room12">Girl Bathroom</option>
+                <option value="room13" data-show=".room13">Boy Bathroom</option>
+                <option value="room14" data-show=".room14">Work Areas</option>
+              </select><br>
+
+              <div class="my-info-1">
+                <div class="room1 hide">name: "Christine's Office"<br>
+                    zone: 1 <br>
+                    maxCapacity: 8 <br>
+                    isEmpty: false<br>
+                    humanPresence: 1<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    alarm: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true</div>
+                <div class="room2 hide">name: "Gordon's Office"<br>
+                    zone: 1<br>
+                    maxCapacity: 8<br>
+                    isEmpty: false<br>
+                    humanPresence: 1<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    alarm: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true</div>
+                <div class="room3 hide">name: "Art Room/ Outreach Classroom"<br>
+                    zone: 1<br>
+                    maxCapacity: 8<br>
+                    isEmpty: false<br>
+                    humanPresence: 4<br>
+                    alarm: true<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true</div>
+                <div class="room4 hide">name: "Carol's Office"<br>
+                    zone: 3<br>
+                    maxCapacity: 8<br>
+                    isEmpty: false<br>
+                    humanPresence: 1<br>
+                    alarm: true<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true</div>
+                <div class="room5 hide">name: "General Use Office"<br>
+                    zone: 4<br>
+                    maxCapacity: 8<br>
+                    isEmpty: true<br>
+                    humanPresence: 0<br>
+                    alarm: true<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true </div>
+                <div class="room6 hide">name: "Kitchen"<br>
+                    zone: 1<br>
+                    maxCapacity: 8<br>
+                    isEmpty: false<br>
+                    alarm: true<br>
+                    humanPresence: 2<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: false</div>
+                <div class="room7 hide">name: "Meeting/Tutoring Room"<br>
+                    zone: 1<br>
+                    maxCapacity: 8<br>
+                    isEmpty: true<br>
+                    humanPresence: 0<br>
+                    alarm: true<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true </div>
+                <div class="room8 hide">name: "Outreach Classroom"<br>
+                    zone: 2<br>
+                    maxCapacity: 20<br>
+                    isEmpty: true<br>
+                    humanPresence: 0<br>
+                    lockStatus: false<br>
+                    alarm: true<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true</div>
+                <div class="room9 hide">name: "Outreach/Computer Lab"<br>
+                    zone: 2<br>
+                    maxCapacity: 20<br>
+                    isEmpty: true<br>
+                    humanPresence: 0<br>
+                    lockStatus: false<br>
+                    alarm: true<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true </div>
+                <div class="room10 hide">name: "Middle Room & Music Room"<br>
+                    zone: 4<br>
+                    maxCapacity: 50<br>
+                    isEmpty: false<br>
+                    humanPresence: 5<br>
+                    alarm: true<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true </div>
+                <div class="room11 hide">name: "Main Room"<br>
+                    zone: 4<br>
+                    maxCapacity: 50<br>
+                    isEmpty: false<br>
+                    alarm: true<br>
+                    humanPresence: 8<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true</div>
+                <div class="room12 hide">name: "Ladies Bathroom"<br>
+                    zone: 2<br>
+                    maxCapacity: 6<br>
+                    alarm: true<br>
+                    isEmpty: true<br>
+                    humanPresence: 0<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: false </div>
+                <div class="room13 hide">Citrus is...</div>
+                <div class="room13 hide">name: "Lad's Bathroom"<br>
+                    zone: 2<br>
+                    maxCapacity: 6<br>
+                    isEmpty: true<br>
+                    humanPresence: 0<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: false<br>
+                    alarm: true</div>
+                <div class="room14 hide">name: "Student work areas"<br>
+                    zone: 2<br>
+                    maxCapacity: 10<br>
+                    isEmpty: true<br>
+                    humanPresence: 0<br>
+                    lockStatus: false<br>
+                    heatSensor: true<br>
+                    heatSensorStatus: true<br>
+                    motionSensor: true<br>
+                    motionSensorStatus: true<br>
+                    fumesSensor: true<br>
+                    fumesSensorStatus: true<br>
+                    sprinklers: true<br>
+                    sprinklerStatus: true<br>
+                    phone: true<br>
+                    alarm: true</div>
+
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -453,6 +707,7 @@
         <div class='stylesE'>
         <h1>EMERGENCY SERVICES HAVE BEEN CALLED</h1>
         <h1>PLEASE EVACUATE THE BUILDING</h1>
+
         </div>
       </div>
       <!--END code for login popup-->
